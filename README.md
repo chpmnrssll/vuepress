@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /spider.gif
+heroImage: /assets/spider.gif
 actionText: Exterminate
 actionLink: /exterminate/
 features:
