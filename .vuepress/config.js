@@ -1,6 +1,18 @@
 module.exports = {
-  base: 'aluminum-spider',
-  description: 'Aluminum Spider',
-  dest: 'dist',
-  title: 'VuePress + Github Pages'
+  base: '/aluminum-spider/',
+  title: 'Aluminum Spider',
+  description: 'VuePress + Github Pages',
+  evergreen: true,
+  themeConfig: {
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'About', link: '/about/' },
+      { text: 'Exterminate', link: '/exterminate/' }
+    ],
+    sidebar: [
+      '/',
+      '/about/',
+      '/exterminate/'
+    ]
+  }
 }
