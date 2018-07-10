@@ -1,6 +1,6 @@
 module.exports = {
-  base: '/aluminum-spider/',
-  title: 'Aluminum Spider',
+  base: '/aluminium-spider/',
+  title: 'Aluminium Spider',
   description: 'VuePress + Github Pages',
   evergreen: true,
   themeConfig: {
