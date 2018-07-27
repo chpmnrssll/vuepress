@@ -3,7 +3,7 @@
     <div class="content">
       <h1>404</h1>
       <blockquote>{{ getMsg() }}</blockquote>
-      <img :src="$withBase('/assets/deadLink.gif')" alt="Dead Link">
+      <img src="/aluminium-spider/assets/deadLink.gif" alt="Dead Link">
       <router-link to="/">Home</router-link>
     </div>
   </div>
