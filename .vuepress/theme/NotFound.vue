@@ -3,17 +3,17 @@
     <div class="content">
       <h1>404</h1>
       <blockquote>{{ getMsg() }}</blockquote>
-      <router-link to="/">Take me home.</router-link>
+      <img :src="$withBase('/assets/deadLink.gif')" alt="Dead Link">
+      <router-link to="/">Home</router-link>
     </div>
   </div>
 </template>
 
 <script>
 const msgs = [
-  `There's nothing here.`,
-  `How did we get here?`,
-  `That's a Four-Oh-Four.`,
-  `Looks like we've got some broken links.`
+  `Game Over.`,
+  `Not another one.`,
+  `Looks like we've got a dead link.`
 ]
 
 export default {

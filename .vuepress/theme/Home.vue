@@ -1,11 +1,9 @@
 <template>
   <div class="home">
     <div class="hero">
-      <img v-if="data.heroImage" :src="$withBase(data.heroImage)" alt="hero">
-      <h1>{{ data.heroText || $title || 'Hello' }}</h1>
-      <p class="description">
-        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
-      </p>
+      <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="$withBase(data.heroAltText || 'hero image')">
+      <h1 v-if="data.heroText">{{ data.heroText }}</h1>
+      <p v-if="data.tagline" class="description">{{ data.tagline || $description }}</p>
       <p class="action" v-if="data.actionText && data.actionLink">
         <NavLink class="action-button" :item="actionLink"/>
       </p>
