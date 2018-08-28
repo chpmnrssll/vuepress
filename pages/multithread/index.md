@@ -12,6 +12,7 @@ A browser based multi-threaded downloader implemented in vanilla JavaScript. <!-
 
 [GitHub](https://github.com/Backblaze-B2-Samples/multithreaded-downloader-js)
 
+![Backblaze B2](/assets/multiThreadedDownloader.png)
 ## Requirements
 
 The downloader should fetch the file directly from the web browser without a server needed to proxy the file. The download process should not need any client software or browser plugin to be installed. It should allow for resuming an interrupted download, or at least retrying a part of the file that was interrupted.
