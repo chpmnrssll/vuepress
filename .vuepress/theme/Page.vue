@@ -12,20 +12,19 @@
       </p>
     </header>
     <Content :custom="false"/>
-    <slot name="bottom"/>
     <footer class="footer">
       <div class="meta">
+        <span class="lastUpdated" v-if="this.$page.frontmatter.lastUpdated">
+          {{ lastUpdated }}
+        </span>
         <span class="tags" v-if="this.$page.frontmatter.tags">
           <span>Tags: </span>
           <span v-for="tag in this.$page.frontmatter.tags">{{ tag }}</span>
         </span>
-        <span class="lastUpdated" v-if="this.$page.frontmatter.lastUpdated">
-          <span class="prefix">{{ lastUpdatedText }}: </span>
-          <span class="time">{{ lastUpdated }}</span>
-        </span>
       </div>
       <div class="text">{{ this.$site.themeConfig.footer }}</div>
     </footer>
+    <slot name="bottom"/>
   </div>
 </template>
 
@@ -35,22 +34,21 @@ import { resolvePage, normalize, outboundRE, endingSlashRE } from "./util";
 export default {
   props: ["sidebarItems"],
   computed: {
-    lastUpdated () {
+    lastUpdated() {
       if (this.$page.frontmatter.lastUpdated) {
-        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(this.$page.frontmatter.lastUpdated).toLocaleString(this.$lang, options);
+        var options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        };
+        return new Date(this.$page.frontmatter.lastUpdated).toLocaleString(
+          this.$lang,
+          options
+        );
       }
     },
-    lastUpdatedText () {
-      if (typeof this.$themeLocaleConfig.lastUpdated === "string") {
-        return this.$themeLocaleConfig.lastUpdated;
-      }
-      if (typeof this.$site.themeConfig.lastUpdated === "string") {
-        return this.$site.themeConfig.lastUpdated;
-      }
-      return "Last Updated";
-    },
-    prev () {
+    prev() {
       const prev = this.$page.frontmatter.prev;
       if (prev === false) {
         return;
@@ -60,7 +58,7 @@ export default {
         return resolvePrev(this.$page, this.sidebarItems);
       }
     },
-    next () {
+    next() {
       const next = this.$page.frontmatter.next;
       if (next === false) {
         return;
@@ -72,19 +70,18 @@ export default {
     }
   },
 
-  methods: {
-  }
+  methods: {}
 };
 
-function resolvePrev (page, items) {
+function resolvePrev(page, items) {
   return find(page, items, -1);
 }
 
-function resolveNext (page, items) {
+function resolveNext(page, items) {
   return find(page, items, 1);
 }
 
-function find (page, items, offset) {
+function find(page, items, offset) {
   const res = [];
   items.forEach(item => {
     if (item.type === "group") {
@@ -122,11 +119,7 @@ function find (page, items, offset) {
   .last-updated
     float right
     font-size 0.9em
-    .prefix
-      color lighten($textColor, 25%)
-      font-weight 500
-    .time
-      color #aaa
+    color #aaa
       font-weight 400
 
 .page-nav
