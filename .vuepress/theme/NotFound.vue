@@ -1,19 +1,18 @@
 <template>
   <div class="theme-container">
-    <div class="content">
-      <h1>404</h1>
-      <blockquote>{{ getMsg() }}</blockquote>
-      <img src="/aluminium-spider/assets/deadLink.gif" alt="Dead Link">
-      <router-link to="/">Home</router-link>
-    </div>
+    <header class="header gradientOverlay">
+      <img class="image" src="/aluminium-spider/assets/deadLink.gif" alt="Dead Link">
+      <h1 class="title">404</h1>
+      <p class="tagline">{{ getMsg() }}</p>
+    </header>
   </div>
 </template>
 
 <script>
 const msgs = [
-  `Game Over.`,
-  `Not another one.`,
-  `Looks like we've got a dead link.`
+  `Something unfortunate has happened.`,
+  `It's dangerous to go alone.`,
+  `You've found a dead link.`
 ]
 
 export default {

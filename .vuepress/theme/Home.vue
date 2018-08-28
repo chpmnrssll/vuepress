@@ -1,23 +1,35 @@
 <template>
   <div class="home">
-    <div class="hero">
-      <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="$withBase(data.heroAltText || 'hero image')">
-      <h1 v-if="data.heroText">{{ data.heroText }}</h1>
-      <p v-if="data.tagline" class="description">{{ data.tagline || $description }}</p>
-      <p class="action" v-if="data.actionText && data.actionLink">
-        <NavLink class="action-button" :item="actionLink"/>
+    <header class="header gradientOverlay">
+      <img class="image" v-if="this.$page.frontmatter.image"
+        :src="$withBase(this.$page.frontmatter.image)"
+        :alt="$withBase(this.$page.frontmatter.altText || 'Header Image')">
+      <h1 class="title" v-if="this.$page.frontmatter.title">
+        {{ this.$page.frontmatter.title }}
+      </h1>
+      <p class="tagline" v-if="this.$page.frontmatter.tagline">
+        {{ this.$page.frontmatter.tagline }}
       </p>
-    </div>
-    <div class="features" v-if="data.features && data.features.length">
-      <div class="feature" v-for="feature in data.features">
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.details }}</p>
+    </header>
+    <main>
+      <div class="features">
+        <NavLink class="feature" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page')" :key="page.key" :url="page.path">
+          <h2>{{ page.title }}</h2>
+          <h3>{{ page.frontmatter.tagline }}</h3>
+          <div v-html="page.excerpt"/>
+        </NavLink>
+        <NavLink class="feature" :url="'/404/'">
+          <h2>404</h2>
+          <p>Error Page</p>
+        </NavLink>
       </div>
-    </div>
+    </main>
+
     <Content custom/>
-    <div class="footer" v-if="data.footer">
-      {{ data.footer }}
-    </div>
+
+    <footer class="footer">
+      <div class="text">{{ this.$site.themeConfig.footer }}</div>
+    </footer>
   </div>
 </template>
 
@@ -27,13 +39,10 @@ import NavLink from './NavLink.vue'
 export default {
   components: { NavLink },
   computed: {
-    data () {
-      return this.$page.frontmatter
-    },
     actionLink () {
       return {
-        link: this.data.actionLink,
-        text: this.data.actionText
+        link: this.$page.frontmatter.actionLink,
+        text: this.$page.frontmatter.actionText
       }
     }
   }
@@ -44,62 +53,33 @@ export default {
 @import './styles/config.styl'
 
 .home
-  padding $navbarHeight 2rem 0
-  max-width 960px
-  margin 0px auto
-  .hero
-    text-align center
-    img
-      max-height 280px
-      display block
-      margin 3rem auto 1.5rem
-    h1
-      font-size 3rem
-    h1, .description, .action
-      margin 1.8rem auto
-    .description
-      max-width 35rem
-      font-size 1.6rem
-      line-height 1.3
-      color lighten($textColor, 40%)
-    .action-button
-      display inline-block
-      font-size 1.2rem
-      color #fff
-      background-color $accentColor
-      padding 0.8rem 1.6rem
-      border-radius 4px
-      transition background-color .1s ease
-      box-sizing border-box
-      border-bottom 1px solid darken($accentColor, 10%)
-      &:hover
-        background-color lighten($accentColor, 10%)
+  main
+    margin 0 2rem
+    padding 2rem 0
   .features
-    border-top 1px solid $borderColor
-    padding 1.2rem 0
-    margin-top 2.5rem
+    align-content stretch
+    align-items flex-start
     display flex
     flex-wrap wrap
-    align-items flex-start
-    align-content stretch
-    justify-content space-between
+    justify-content space-around
   .feature
-    flex-grow 1
     flex-basis 30%
+    flex-grow 1
     max-width 30%
     h2
-      font-size 1.4rem
+      color darken(saturate($color-primary, 30%), 30%)
+      font-size 1.25rem
       font-weight 500
-      border-bottom none
+      margin 0
       padding-bottom 0
-      color lighten($textColor, 10%)
+    h3
+      color lighten(desaturate($color-secondary, 20%), 20%)
+      font-size .75rem
+      font-weight 500
+      margin 0
+      padding-bottom 0
     p
-      color lighten($textColor, 25%)
-  .footer
-    padding 2.5rem
-    border-top 1px solid $borderColor
-    text-align center
-    color lighten($textColor, 25%)
+      color darken(saturate($color-primary, 60%), 60%)
 
 @media (max-width: $MQMobile)
   .home
@@ -111,21 +91,6 @@ export default {
 
 @media (max-width: $MQMobileNarrow)
   .home
-    padding-left 1.5rem
-    padding-right 1.5rem
-    .hero
-      img
-        max-height 210px
-        margin 2rem auto 1.2rem
-      h1
-        font-size 2rem
-      h1, .description, .action
-        margin 1.2rem auto
-      .description
-        font-size 1.2rem
-      .action-button
-        font-size 1rem
-        padding 0.6rem 1.2rem
     .feature
       h2
         font-size 1.25rem

@@ -1,40 +1,37 @@
 <template>
-  <router-link
-    class="nav-link"
-    :to="link"
-    v-if="!isExternal(link)"
-    :exact="exact"
-  >{{ item.text }}</router-link>
-  <a
-    v-else
-    :href="link"
+  <router-link v-if="!isExternal(url)" class="nav-link" :to="url" :exact="exact">
+    <slot></slot>
+  </router-link>
+  <a v-else
     class="nav-link external"
-    :target="isMailto(link) || isTel(link) ? null : '_blank'"
-    :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
-  >
-    {{ item.text }}
+    :href="url"
+    :target="isMailto(url) || isTel(url) ? null : '_blank'"
+    :rel="isMailto(url) || isTel(url) ? null : 'noopener noreferrer'">
+    <slot></slot>
     <OutboundLink/>
   </a>
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from './util'
+import { isExternal, isMailto, isTel, ensureExt } from "./util";
 
 export default {
   props: {
-    item: {
+    url: {
       required: true
     }
   },
   computed: {
-    link () {
-      return ensureExt(this.item.link)
+    link() {
+      return ensureExt(this.url);
     },
-    exact () {
+    exact() {
       if (this.$site.locales) {
-        return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
+        return Object.keys(this.$site.locales).some(
+          rootLink => rootLink === this.link
+        );
       }
-      return this.link === '/'
+      return this.link === "/";
     }
   },
   methods: {
@@ -42,5 +39,5 @@ export default {
     isMailto,
     isTel
   }
-}
+};
 </script>

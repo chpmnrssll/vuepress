@@ -1,81 +1,102 @@
 <template>
   <div class="page">
+    <header class="header gradientOverlay">
+      <img class="image" v-if="this.$page.frontmatter.image"
+        :src="$withBase(this.$page.frontmatter.image)"
+        :alt="$withBase(this.$page.frontmatter.altText || 'Header Image')">
+      <h1 class="title" v-if="this.$page.frontmatter.title">
+        {{ this.$page.frontmatter.title }}
+      </h1>
+      <p class="tagline" v-if="this.$page.frontmatter.tagline">
+        {{ this.$page.frontmatter.tagline }}
+      </p>
+    </header>
     <Content :custom="false"/>
-    <div class="last-updated" v-if="lastUpdated">
-      <span class="prefix">{{ lastUpdatedText }}: </span>
-      <span class="time">{{ lastUpdated }}</span>
-    </div>
     <slot name="bottom"/>
+    <footer class="footer">
+      <div class="meta">
+        <span class="tags" v-if="this.$page.frontmatter.tags">
+          <span>Tags: </span>
+          <span v-for="tag in this.$page.frontmatter.tags">{{ tag }}</span>
+        </span>
+        <span class="lastUpdated" v-if="this.$page.frontmatter.lastUpdated">
+          <span class="prefix">{{ lastUpdatedText }}: </span>
+          <span class="time">{{ lastUpdated }}</span>
+        </span>
+      </div>
+      <div class="text">{{ this.$site.themeConfig.footer }}</div>
+    </footer>
   </div>
 </template>
 
 <script>
-import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
+import { resolvePage, normalize, outboundRE, endingSlashRE } from "./util";
 
 export default {
-  props: ['sidebarItems'],
+  props: ["sidebarItems"],
   computed: {
     lastUpdated () {
-      if (this.$page.lastUpdated) {
-        return new Date(this.$page.lastUpdated).toLocaleString(this.$lang)
+      if (this.$page.frontmatter.lastUpdated) {
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(this.$page.frontmatter.lastUpdated).toLocaleString(this.$lang, options);
       }
     },
     lastUpdatedText () {
-      if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
-        return this.$themeLocaleConfig.lastUpdated
+      if (typeof this.$themeLocaleConfig.lastUpdated === "string") {
+        return this.$themeLocaleConfig.lastUpdated;
       }
-      if (typeof this.$site.themeConfig.lastUpdated === 'string') {
-        return this.$site.themeConfig.lastUpdated
+      if (typeof this.$site.themeConfig.lastUpdated === "string") {
+        return this.$site.themeConfig.lastUpdated;
       }
-      return 'Last Updated'
+      return "Last Updated";
     },
     prev () {
-      const prev = this.$page.frontmatter.prev
+      const prev = this.$page.frontmatter.prev;
       if (prev === false) {
-        return
+        return;
       } else if (prev) {
-        return resolvePage(this.$site.pages, prev, this.$route.path)
+        return resolvePage(this.$site.pages, prev, this.$route.path);
       } else {
-        return resolvePrev(this.$page, this.sidebarItems)
+        return resolvePrev(this.$page, this.sidebarItems);
       }
     },
     next () {
-      const next = this.$page.frontmatter.next
+      const next = this.$page.frontmatter.next;
       if (next === false) {
-        return
+        return;
       } else if (next) {
-        return resolvePage(this.$site.pages, next, this.$route.path)
+        return resolvePage(this.$site.pages, next, this.$route.path);
       } else {
-        return resolveNext(this.$page, this.sidebarItems)
+        return resolveNext(this.$page, this.sidebarItems);
       }
-    },
+    }
   },
 
   methods: {
   }
-}
+};
 
 function resolvePrev (page, items) {
-  return find(page, items, -1)
+  return find(page, items, -1);
 }
 
 function resolveNext (page, items) {
-  return find(page, items, 1)
+  return find(page, items, 1);
 }
 
 function find (page, items, offset) {
-  const res = []
+  const res = [];
   items.forEach(item => {
-    if (item.type === 'group') {
-      res.push(...item.children || [])
+    if (item.type === "group") {
+      res.push(...(item.children || []));
     } else {
-      res.push(item)
+      res.push(item);
     }
-  })
+  });
   for (let i = 0; i < res.length; i++) {
-    const cur = res[i]
-    if (cur.type === 'page' && cur.path === page.path) {
-      return res[i + offset]
+    const cur = res[i];
+    if (cur.type === "page" && cur.path === page.path) {
+      return res[i + offset];
     }
   }
 }
@@ -86,13 +107,13 @@ function find (page, items, offset) {
 @require './styles/wrapper.styl'
 
 .page
-  padding-bottom 2rem
+  padding-bottom 1rem
 
 .page-edit
   @extend $wrapper
-  padding-top 1rem
-  padding-bottom 1rem
   overflow auto
+  padding-bottom 1rem
+  padding-top 1rem
   .edit-link
     display inline-block
     a
@@ -102,22 +123,22 @@ function find (page, items, offset) {
     float right
     font-size 0.9em
     .prefix
-      font-weight 500
       color lighten($textColor, 25%)
+      font-weight 500
     .time
-      font-weight 400
       color #aaa
+      font-weight 400
 
 .page-nav
   @extend $wrapper
-  padding-top 1rem
   padding-bottom 0
+  padding-top 1rem
   .inner
-    min-height 2rem
-    margin-top 0
     border-top 1px solid $borderColor
-    padding-top 1rem
+    margin-top 0
+    min-height 2rem
     overflow auto // clear float
+    padding-top 1rem
   .next
     float right
 
@@ -126,8 +147,7 @@ function find (page, items, offset) {
     .edit-link
       margin-bottom .5rem
     .last-updated
-      font-size .8em
       float none
+      font-size .8em
       text-align left
-
 </style>

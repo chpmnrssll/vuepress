@@ -1,21 +1,22 @@
 <template>
 <div class="theme-container" :class="pageClasses">
-  <div class="custom-layout" v-if="$page.frontmatter.layout">
+  <component v-if="$page.frontmatter.layout" :is="$page.frontmatter.layout" />
+  <!-- <div class="custom-layout" v-if="$page.frontmatter.layout">
     <component :is="$page.frontmatter.layout" />
   </div>
   <Home v-else-if="$page.frontmatter.home" />
   <Page v-else>
     <slot name="page-top" slot="top" />
     <slot name="page-bottom" slot="bottom" />
-  </Page>
+  </Page> -->
 </div>
 </template>
 
 <script>
 import Vue from "vue";
-import nprogress from "nprogress";
 import Home from "./Home.vue";
 import Page from "./Page.vue";
+import nprogress from "nprogress";
 
 export default {
   components: {
@@ -42,9 +43,10 @@ export default {
     });
 
     this.$router.beforeEach((to, from, next) => {
-      if (to.path !== from.path && !Vue.component(to.name)) {
-        nprogress.start();
-      }
+      // if (to.path !== from.path && !Vue.component(to.name)) {
+      //   nprogress.start();
+      // }
+      nprogress.start();
       next();
     });
 
@@ -58,5 +60,4 @@ export default {
 };
 </script>
 
-<style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="./styles/theme.styl" lang="stylus"></style>

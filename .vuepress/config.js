@@ -4,6 +4,7 @@ module.exports = {
   description: 'VuePress + Github Pages',
   evergreen: true,
   themeConfig: {
+    footer: 'GPL v3 Licensed | Copyright © 2018-present Russell Chapman',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About', link: '/about/' },
