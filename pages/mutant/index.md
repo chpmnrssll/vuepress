@@ -1,6 +1,6 @@
 ---
 layout: page
-image: /assets/rats.gif
+image: /assets/backgrounds/rats.gif
 title: Mutant Rodents
 tagline: And other irradiated creatures
 lastUpdated: 2018-06-25T00:00:00.000Z

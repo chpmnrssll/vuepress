@@ -14,6 +14,7 @@
     <main>
       <div class="features">
         <NavLink class="feature" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page')" :key="page.key" :url="page.path">
+          <img class="image" :src="$withBase(page.frontmatter.image)" :alt="page.frontmatter.altText">
           <h2>{{ page.title }}</h2>
           <h3>{{ page.frontmatter.tagline }}</h3>
           <div v-html="page.excerpt"/>
@@ -63,9 +64,14 @@ export default {
     flex-wrap wrap
     justify-content space-around
   .feature
+    box-shadow 1px 2px 8px hsla($color-primary-hue, $color-primary-saturation + 30, $color-primary-lightness - 40, .5)
     flex-basis 30%
     flex-grow 1
+    height 30vh
+    margin .5rem .2rem
     max-width 30%
+    padding .4rem
+    position relative
     h2
       color darken(saturate($color-primary, 30%), 30%)
       font-size 1.25rem
@@ -80,6 +86,34 @@ export default {
       padding-bottom 0
     p
       color darken(saturate($color-primary, 60%), 60%)
+    &::before
+      background radial-gradient(circle at top left, $color-gradient-start, $color-gradient-end)
+      content ''
+      height 100%
+      left 0
+      mix-blend-mode color
+      opacity .25
+      position absolute
+      top 0
+      width 100%
+      z-index -1
+    &::after
+      background radial-gradient(circle at top left, rgba(255, 255, 255, 1), rgba(255, 255, 255, .5))
+      content ''
+      height 100%
+      left 0
+      position absolute
+      top 0
+      width 100%
+      z-index -2
+    .image
+      left 0
+      height 100%
+      object-fit cover
+      position absolute
+      top 0
+      width 100%
+      z-index -3
 
 @media (max-width: $MQMobile)
   .home

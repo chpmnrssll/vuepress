@@ -1,6 +1,6 @@
 ---
 layout: home
-image: /assets/aluminiumSpider.gif
+image: /assets/backgrounds/aluminiumSpider.gif
 title: Aluminium Spider
 altText: Aluminium Spider
 tagline: Vuepress + Github Pages

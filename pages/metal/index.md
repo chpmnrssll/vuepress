@@ -1,6 +1,6 @@
 ---
 layout: page
-image: /assets/spider.gif
+image: /assets/backgrounds/spider.gif
 title: Metal Insects
 #tagline: With Raid
 lastUpdated: 2018-06-25T00:00:00.000Z

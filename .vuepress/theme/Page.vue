@@ -3,7 +3,7 @@
     <header class="header gradientOverlay">
       <img class="image" v-if="this.$page.frontmatter.image"
         :src="$withBase(this.$page.frontmatter.image)"
-        :alt="$withBase(this.$page.frontmatter.altText || 'Header Image')">
+        :alt="this.$page.frontmatter.altText || 'Header Image'">
       <h1 class="title" v-if="this.$page.frontmatter.title">
         {{ this.$page.frontmatter.title }}
       </h1>
@@ -105,6 +105,11 @@ function find(page, items, offset) {
 
 .page
   padding-bottom 1rem
+  .image-m
+    object-fit cover
+    margin 1rem
+    width 33%
+    box-shadow 1px 2px 4px $color-primary-darkest
 
 .page-edit
   @extend $wrapper

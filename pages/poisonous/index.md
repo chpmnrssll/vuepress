@@ -1,6 +1,6 @@
 ---
 layout: page
-image: /assets/poison.gif
+image: /assets/backgrounds/poison.gif
 title: Poisonous Fruit
 tagline: Mystical
 lastUpdated: 2018-06-25T00:00:00.000Z

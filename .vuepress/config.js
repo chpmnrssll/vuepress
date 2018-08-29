@@ -3,6 +3,7 @@ module.exports = {
   title: 'Aluminium Spider',
   description: 'VuePress + Github Pages',
   evergreen: true,
+  // markdown: {},
   themeConfig: {
     footer: 'GPL v3 Licensed | Copyright © 2018-present Russell Chapman',
     nav: [

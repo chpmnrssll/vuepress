@@ -1,6 +1,6 @@
 ---
 layout: page
-image: /assets/servers.gif
+image: /assets/backgrounds/servers.gif
 title: Multithreaded Downloader
 tagline: Using HTTP Range Requests
 lastUpdated: 2018-08-27T00:00:00.000Z
@@ -10,9 +10,8 @@ category: [ Article ]
 
 A browser based multi-threaded downloader implemented in vanilla JavaScript. <!-- more --> Fetches parts of a file using the HTTP Range header and downloads those pieces in parallel. When the pieces have all been downloaded, the original file is re-assembled and saved in the browser's Downloads folder.
 
-[GitHub](https://github.com/Backblaze-B2-Samples/multithreaded-downloader-js)
+[[toc]]
 
-![Backblaze B2](/assets/multiThreadedDownloader.png)
 ## Requirements
 
 The downloader should fetch the file directly from the web browser without a server needed to proxy the file. The download process should not need any client software or browser plugin to be installed. It should allow for resuming an interrupted download, or at least retrying a part of the file that was interrupted.
@@ -25,58 +24,50 @@ This project will allow us to specify the number of download threads and the siz
 
 100% client side JavaScript, no plug-ins or proxy required
 
-## a[download] Method
+## Methods
+
+### a[download]
 
 -   WhatWG Web Streams
 -   Memory limit
 -   Blob
 
-## StreamSaver.js Method
+### StreamSaver.js
 
--   Uses StreamSaver.js to simplify downloading the output stream.
+-   Uses [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js) to simplify downloading the output stream.
 -   Concatenates each response stream (in order) into a final output stream
 -   Cross-origin dependency (mitm.html)
 -   Service worker timeout
 -   WhatWG Web Streams
+-   [Web Streams Polyfill](https://github.com/creatorrr/web-streams-polyfill)
 
-## HTML5 FileSystem API Method
+### HTML5 FileSystem API
 
--   Uses Bro-fs (HTML5 Filesystem api) to temporarily save each chunk.
+-   Uses [Bro-fs](https://github.com/vitalets/bro-fs) (HTML5 Filesystem api) to temporarily save each chunk.
 -   Concatenates all chunks once complete and triggers a[download] with final file.
--   Deprecated
+-   HTML5 Filesystem is marked deprecated but is still commonly in use.
 
-## Code
+## Usage
+
+### Constructor
 
 The Multithread constructor accepts a single object parameter:
 
 ```javascript
 new MultiThread({
-  // The request url
-  url: 'http://some-url/',
-
-  // Request headers to pass-though
-  headers: {
+  url: 'http://some-url/',    // The request url
+  headers: {                  // Request headers to pass-though
     'Authorization': `Bearer ${accessToken}`
   },
-
-  // The final output fileName
-  fileName: 'some-file.ext',
-
-  // Number of concurrent request threads
-  threads: 6,
-
-  // Size of each chunk in MB
-  chunkSize: 4,
-
-  // Number of retry attempts
-  retries: 2,
-
-  // Delay before another retry attempt in ms
-  retryDelay: 1000,
+  fileName: 'some-file.ext',  // The final output fileName
+  chunkSize: 4,               // Size of each chunk in MB
+  threads: 6,                 // Number of concurrent request threads
+  retries: 2,                 // Number of retry attempts
+  retryDelay: 1000            // Delay before another retry attempt in ms
 })
 ```
 
-## Usage
+### Callbacks
 
 Multithread triggers several events that you can attach callbacks to. The callbacks will be called with a single object consisting of the following keys:
 
@@ -94,7 +85,19 @@ Each individual chunk will also trigger it's own events:
 
 PromiseQueue provides concurrency by using a queue of promises. It will automatically retry a configurable amount of times before triggering either an "onFinish" or "onError" event.
 
-### Reference
+## Demo
+
+<a href="https://backblaze-b2-samples.github.io/multithreaded-downloader-js/examples/backblaze.html">
+  <img class="image-m" :src="$withBase('/assets/backblazeB2.png')" alt="Backblaze B2"/>
+</a>
+
+<a href="https://backblaze-b2-samples.github.io/multithreaded-downloader-js/examples/googleDrive.html">
+  <img class="image-m" :src="$withBase('/assets/googleDrive.jpg')" alt="Google Drive"/>
+</a>
+
+-   [Source](https://github.com/Backblaze-B2-Samples/multithreaded-downloader-js)
+
+## Reference
 
 -   [Parallel chunk requests in a browser via Service Workers](https://blog.ghaiklor.com/parallel-chunk-requests-in-a-browser-via-service-workers-7be10be2b75f)
 -   [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API)
@@ -102,9 +105,3 @@ PromiseQueue provides concurrency by using a queue of promises. It will automati
 -   [browser-server](https://github.com/mafintosh/browser-server)
 -   [fetch-retry](https://github.com/jonbern/fetch-retry)
 -   [Pipes.js](http://pipes.js.org/)
-
-### Dependencies
-
--   ~~[Web Streams Polyfill](https://github.com/creatorrr/web-streams-polyfill)~~
--   ~~[StreamSaver](https://github.com/jimmywarting/StreamSaver.js)~~
--   [bro-fs](https://github.com/vitalets/bro-fs)

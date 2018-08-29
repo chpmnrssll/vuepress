@@ -1,6 +1,6 @@
 ---
 layout: page
-image: /assets/gears.gif
+image: /assets/backgrounds/gears.gif
 title: About
 tagline: All the Things
 lastUpdated: 2018-08-26T00:00:00.000Z

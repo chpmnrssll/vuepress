@@ -1,22 +1,23 @@
 .gradientOverlay
   &::before
-    background radial-gradient(circle at top, $color-gradient-start, $color-gradient-end)
+    background radial-gradient(circle at top left, $color-gradient-start, $color-gradient-end)
     content ''
     height $headerHeight
     left 0
-    mix-blend-mode lighten
+    mix-blend-mode color
     opacity .5
     position absolute
     top 0
     width 100vw
     z-index -2
   &::after
-    background radial-gradient(circle at top, $color-gradient-start, $color-gradient-end)
+    // background radial-gradient(circle at top, $color-gradient-start, $color-gradient-end)
+    background radial-gradient(circle at top left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
     content ''
     height $headerHeight
     left 0
     opacity .5
-    mix-blend-mode color
+    // mix-blend-mode color
     position absolute
     top 0
     width 100vw
