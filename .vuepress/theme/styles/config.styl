@@ -1,9 +1,22 @@
 // colors
+$primaryColor-h = 200
+$primaryColor-s = 70%
+$primaryColor-l = 50%
+$primaryColor = hsl($primaryColor-h, $primaryColor-s, $primaryColor-l)
+
+$secondaryColor-h = 20
+$secondaryColor-s = 60%
+$secondaryColor-l = 40%
+$secondaryColor = hsl($secondaryColor-h, $secondaryColor-s, $secondaryColor-l)
+
 $accentColor = hsl(200, 45%, 30%)
 $textColor = hsl(200, 15%, 30%)
 $borderColor = hsl(200, 15%, 85%)
 $codeBgColor = hsl(200, 15%, 15%)
 $arrowBgColor = hsl(200, 30%, 70%)
+
+$color-gradient-start = rgba(0, 0, 0, 0)
+$color-gradient-end = hsla($primaryColor-h, $primaryColor-s + 20%, $primaryColor-l - 20%, 1)
 
 // layout
 $navbarHeight = 0
@@ -12,35 +25,33 @@ $contentWidth = 740px
 $headerHeight = 50vh
 
 // responsive breakpoints
-$MQNarrow = 959px
-$MQMobile = 719px
-$MQMobileNarrow = 419px
+$MQDesktop = 2560px
+$MQLaptop = 1280px
+$MQTabletL = 1024px
+$MQTablet = 768px
+$MQMobileL = 480px
+$MQMobile = 320px
+
+// Font faces
+$headerFont = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+$bodyFont = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+
+:root {
+  --headerFont $headerFont
+  --bodyFont $bodyFont
+  --fontColor hsla(0, 0%, 0%, 0.8)
+  --lineHeight 1.5
+  --baseFontSize 112.5%  // 18px
+
+  // Type scale
+  --ratio 1.414  // Augmented fourth
+
+  // Each step of the scale is a power of --ratio
+  --stepUp1 calc(1em * var(--ratio))
+  --stepUp2 calc(var(--stepUp1) * var(--ratio))
+  --stepUp3 calc(var(--stepUp2) * var(--ratio))
+  --stepDown1 calc(1em / var(--ratio))
+}
 
 // code
 $lineNumbersWrapperWidth = 3.5rem
-
-$color-primary-hue = 200
-$color-primary-saturation = 70%
-$color-primary-lightness = 50%
-$color-primary = hsl($color-primary-hue, $color-primary-saturation, $color-primary-lightness)
-$color-primary-dark = hsl($color-primary-hue, $color-primary-saturation + 10%, $color-primary-lightness - 25%)
-$color-primary-darker = hsl($color-primary-hue, $color-primary-saturation + 20%, $color-primary-lightness - 30%)
-$color-primary-darkest = hsl($color-primary-hue, $color-primary-saturation + 30%, $color-primary-lightness - 40%)
-$color-primary-light = hsl($color-primary-hue, $color-primary-saturation - 5%, $color-primary-lightness + 10%)
-$color-primary-lighter = hsl($color-primary-hue, $color-primary-saturation - 10%, $color-primary-lightness + 35%)
-$color-primary-lightest = hsl($color-primary-hue, $color-primary-saturation - 15%, $color-primary-lightness + 48%)
-
-$color-secondary-hue = 20
-$color-secondary-saturation = 60%
-$color-secondary-lightness = 40%
-$color-secondary = hsl($color-secondary-hue, $color-secondary-saturation, $color-secondary-lightness)
-$color-secondary-dark = hsl($color-secondary-hue, $color-secondary-saturation + 10%, $color-secondary-lightness - 25%)
-$color-secondary-darker = hsl($color-secondary-hue, $color-secondary-saturation + 20%, $color-secondary-lightness - 30%)
-$color-secondary-darkest = hsl($color-secondary-hue, $color-secondary-saturation + 30%, $color-secondary-lightness - 40%)
-$color-secondary-light = hsl($color-secondary-hue, $color-secondary-saturation - 5%, $color-secondary-lightness + 20%)
-$color-secondary-lighter = hsl($color-secondary-hue, $color-secondary-saturation - 10%, $color-secondary-lightness + 30%)
-$color-secondary-lightest = hsl($color-secondary-hue, $color-secondary-saturation - 15%, $color-secondary-lightness + 45%)
-
-$color-gradient-start = rgba(0, 0, 0, 0)
-$color-gradient-end = hsla($color-primary-hue, $color-primary-saturation + 20%, $color-primary-lightness - 20%, 1)
-// $color-gradient-end = hsla($color-primary-hue, $color-primary-saturation + 20%, $color-primary-lightness - 30%, 1)

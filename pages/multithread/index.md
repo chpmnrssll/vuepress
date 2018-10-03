@@ -1,6 +1,7 @@
 ---
 layout: page
-image: /assets/backgrounds/servers.gif
+hero: /assets/backgrounds/servers.mp4
+poster: /assets/backgrounds/serversPoster.jpg
 title: Multithreaded Downloader
 tagline: Using HTTP Range Requests
 lastUpdated: 2018-08-27T00:00:00.000Z

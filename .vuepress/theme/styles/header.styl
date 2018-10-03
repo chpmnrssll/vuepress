@@ -1,28 +1,57 @@
 .header
-  display flex
-  flex-direction column
   height $headerHeight
-  justify-content start
-  text-align right
+  position relative
   width 100%
-  .image
-    height $headerHeight
+
+  &::before
+    background radial-gradient(circle at top right, $color-gradient-start, $color-gradient-end)
+    content ''
+    height 100%
     left 0
-    object-fit cover
+    mix-blend-mode color
+    opacity .5
     position absolute
     top 0
     width 100%
+    z-index -1
+
+  &::after
+    background radial-gradient(circle at top right, rgba(255, 255, 255, .95), rgba(255, 255, 255, .05))
+    content ''
+    height 100%
+    left 0
+    position absolute
+    top 0
+    width 100%
+    z-index -2
+
+  .background
+    height $headerHeight
+    overflow hidden
+    position absolute
+    width 100%
     z-index -3
-  .title
-    color $color-primary-lightest
-    margin 0
-    padding 0 .5rem
-    text-shadow 0 0 3px $color-primary-dark, 1px 2px 3px $color-primary-darkest
-  .tagline
-    color $color-secondary-light
-    font-family 'Teko'
-    font-style italic
-    font-weight lighter
-    margin 0
-    padding 0 .5rem
-    text-shadow 1px 0 3px $color-secondary-dark, 1px 1px 1px $color-secondary-dark
+    *
+      height 100%
+      object-fit cover
+      width 100%
+
+  .foreground
+    display flex
+    flex-direction column
+    position absolute
+    text-align right
+    width 100%
+    .title
+      color darken(saturate($primaryColor, 30%), 30%)
+      margin 0
+      padding 0 .5rem
+      text-shadow 0 0 3px $color-primary-dark, 1px 2px 3px $color-primary-darkest
+    .tagline
+      color lighten(desaturate($secondaryColor, 20%), 20%)
+      font-family 'Teko'
+      font-style italic
+      font-weight lighter
+      margin 0
+      padding 0 .5rem
+      text-shadow 1px 0 3px $color-secondary-dark, 1px 1px 1px $color-secondary-dark

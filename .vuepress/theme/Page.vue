@@ -1,15 +1,16 @@
 <template>
   <div class="page">
-    <header class="header gradientOverlay">
-      <img class="image" v-if="this.$page.frontmatter.image"
-        :src="$withBase(this.$page.frontmatter.image)"
-        :alt="this.$page.frontmatter.altText || 'Header Image'">
-      <h1 class="title" v-if="this.$page.frontmatter.title">
-        {{ this.$page.frontmatter.title }}
-      </h1>
-      <p class="tagline" v-if="this.$page.frontmatter.tagline">
-        {{ this.$page.frontmatter.tagline }}
-      </p>
+    <header class="header">
+      <section class="background">
+        <video class="hero" v-if="this.$page.frontmatter.hero" :poster="$withBase(this.$page.frontmatter.poster)" :alt="this.$page.frontmatter.altText" autoplay loop muted playsinline>
+          <source :src="$withBase(this.$page.frontmatter.hero)" type="video/mp4">
+        </video>
+        <img class="hero" v-else-if="this.$page.frontmatter.image" :src="$withBase(this.$page.frontmatter.image)" :alt="this.$page.frontmatter.altText">
+      </section>
+      <section class="foreground">
+        <h1 class="title" v-if="this.$page.frontmatter.title">{{ this.$page.frontmatter.title }}</h1>
+        <div class="tagline" v-if="this.$page.frontmatter.tagline">{{ this.$page.frontmatter.tagline }}</div>
+      </section>
     </header>
     <Content :custom="false"/>
     <footer class="footer">

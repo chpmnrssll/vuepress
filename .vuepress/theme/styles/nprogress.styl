@@ -1,7 +1,7 @@
 #nprogress
   pointer-events none
   .bar
-    background lighten(desaturate($color-secondary, 20%), 20%)
+    background lighten(desaturate($secondaryColor, 20%), 20%)
     position fixed
     z-index 1031
     top 0
@@ -14,7 +14,7 @@
     right 0px
     width 100px
     height 100%
-    box-shadow 0 0 10px darken(saturate($color-secondary, 20%), 20%), 0 0 5px darken(saturate($color-secondary, 20%), 20%)
+    box-shadow 0 0 10px darken(saturate($secondaryColor, 20%), 20%), 0 0 5px darken(saturate($secondaryColor, 20%), 20%)
     opacity 1.0
     transform rotate(3deg) translate(0px, -4px)
   .spinner
@@ -28,8 +28,8 @@
     height 24px
     box-sizing border-box
     border solid 2px transparent
-    border-top-color $color-secondary
-    border-left-color lighten(desaturate($color-secondary, 20%), 20%)
+    border-top-color $secondaryColor
+    border-left-color lighten(desaturate($secondaryColor, 20%), 20%)
     border-radius 50%
     animation nprogress-spinner 400ms linear infinite
 

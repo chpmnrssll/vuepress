@@ -1,0 +1,170 @@
+:root
+  --base-max: 1.25
+  --base-min: 1
+  --endwidth: 105 // need these numbers for h6 and p without units for calc.
+  --h1-responsive: calc(var(--h1-size) + ((var(--modular2) * var(--modular2) * var(--modular2) * var(--modular2) * var(--modular2)) - (var(--modular1) * var(--modular1) * var(--modular1) * var(--modular1) * var(--modular1))) * ((100vw - (var(--startwidth) * 1em)) / (var(--endwidth) - var(--startwidth))))
+  --h1-size: calc(var(--modular1) * var(--modular1) * var(--modular1) * var(--modular1) * var(--modular1) * 1em)
+  --h2-responsive: calc(var(--h2-size) + ((var(--modular2) * var(--modular2) * var(--modular2) * var(--modular2)) - (var(--modular1) * var(--modular1) * var(--modular1) * var(--modular1))) * ((100vw - (var(--startwidth) * 1em)) / (var(--endwidth) - var(--startwidth))))
+  --h2-size: calc(var(--modular1) * var(--modular1) * var(--modular1) * var(--modular1) * 1em)
+  --h3-responsive: calc(var(--h3-size) + ((var(--modular2) * var(--modular2) * var(--modular2)) - (var(--modular1) * var(--modular1) * var(--modular1))) * ((100vw - (var(--startwidth) * 1em)) / (var(--endwidth) - var(--startwidth))))
+  --h3-size: calc(var(--modular1) * var(--modular1) * var(--modular1) * 1em)
+  --h4-responsive: calc(var(--h4-size) + ((var(--modular2) * var(--modular2)) - (var(--modular1) * var(--modular1))) * ((100vw - (var(--startwidth) * 1em)) / (var(--endwidth) - var(--startwidth))))
+  --h4-size: calc(var(--modular1) * var(--modular1) * 1em)
+  --h5-responsive: calc(var(--h5-size) + ((var(--modular2)) - (var(--modular1))) * ((100vw - (var(--startwidth) * 1em)) / (var(--endwidth) - var(--startwidth))))
+  --h5-size: calc(var(--modular1) * 1em)
+  --h6-responsive: calc(var(--h6-size) + ((var(--base-max)) - (var(--base-min))) * ((100vw - (var(--startwidth) * 1em)) / (var(--endwidth) - var(--startwidth))))
+  --h6-size: calc(var(--base-min) * 1em)
+  --modular1: 1.125
+  --modular2: 1.414
+  --p-responsive: calc(var(--p-size) + ((var(--base-max)) - (var(--base-min))) * ((100vw - (var(--startwidth) * 1em)) / (var(--endwidth) - var(--startwidth)))) // Initially I wanted to use an expression like this, and just change the font-min and font-max for each header:
+  --p-size: calc(var(--base-min) * 1em)
+  --startwidth: 30
+  // --fontsize-responsive:calc(var(--font-min) * 1rem + ((var(--font-max)) - (var(--font-min))) * ((100vw - (var(--startwidth) * 1rem)) / (var(--endwidth) - var(--startwidth))))
+  // But I needed a unit to use calc, and font-min and font-max could not be calculated without a unit. For the above to work, they needed to be unitless. Perhaps there is a way around this?
+
+.fluidtype
+  display: block
+  margin: 0 auto
+  max-width: 105em
+  padding: 0 1.5em
+  h1, h2, h3, h4, h5
+    padding: 0
+  h1+p, h2+p, h3+p, h4+p, h5+p, h6+p
+    margin-top: 0
+  h1
+    font-size: var(--h1-size)
+    line-height: 1.45669 // 42px
+    margin: (12/28.8325)+em 0
+  h2
+    font-size: var(--h2-size)
+    line-height: 1.5217196212 // 39
+    margin: (10.5/25.6289)+em 0
+  h3
+    font-size: var(--h3-size)
+    line-height: 1.5802469
+    margin: (12/22.7813)+em 0
+  h4
+    font-size: var(--h4-size)
+    line-height: 1.629629629629 // 33
+    margin: (9/20.25)+em 0
+  h5
+    font-size: var(--h5-size)
+    line-height: 1.66666667 // 30
+    margin: (6/18)+em 0
+  h6
+    font-size: var(--h6-size)
+    line-height: 1.5 // 1.6
+    margin: 0 auto // 12px
+  p
+    font-size: var(--p-size)
+    line-height: 1.5
+    margin: .75em auto
+
+// fluidtype
+@media only screen and (min-width: 30em)
+  .fluidtype h1, .fluidtype h2, .fluidtype h3, .fluidtype h4, .fluidtype h5
+    // expression for responsive margins
+    --lineheight-responsive: calc((var(--lineheight-min) * 1rem) + (var(--lineheight-max) - var(--lineheight-min)) * ((100vw - (var(--startwidth) * 1rem)) / (var(--endwidth) - var(--startwidth))))
+    --margin-responsive: calc((var(--margin-min, 1) * 1rem) + (var(--margin-max, 1.125) - var(--margin-min, 1)) * ((100vw - (var(--startwidth) * 1rem)) / (var(--endwidth) - var(--startwidth))))
+    line-height: var(--lineheight-responsive)
+    margin: var(--margin-responsive) auto // expression for responsive line-heights
+
+  .fluidtype h1
+    font-size: var(--h1-responsive)
+    --lineheight-max: 7.03125 // 112.5
+    --lineheight-min: 2.625 // 42
+    --margin-max: 1.875 // 30
+    --margin-min: 0.75 // 12
+
+  .fluidtype h2
+    --lineheight-max: 5.625 // 90
+    --lineheight-min: 2.4375 // 39
+    --margin-max: 1.875 // 30
+    --margin-min: 0.65625 // 10.5
+    font-size: var(--h2-responsive)
+
+  .fluidtype h3
+    --lineheight-max: 4.21875 //67.5
+    --lineheight-min: 2.25 //36
+    --margin-max: 1.875 // 30
+    --margin-min: 0.75 //12
+    font-size: var(--h3-responsive)
+
+  .fluidtype h4
+    --lineheight-max: 3.28125 //52.5
+    --lineheight-min: 2.0625 //33px
+    --margin-max: 0.9375 // 15
+    --margin-min: 0.5625 //9
+    font-size: var(--h4-responsive)
+
+  .fluidtype h5
+    --lineheight-max: 2.34375
+    --lineheight-min: 1.875
+    --margin-max: 0.9375 // 15
+    --margin-min: 0.375 //6
+    font-size: var(--h5-responsive)
+
+  .fluidtype h6
+    font-size: var(--h6-responsive)
+
+  .fluidtype p
+    font-size: var(--p-responsive)
+
+// CHROME ONLY: There is a bug or possibly rounding error that makes the lines jump. This adjust for this.
+// @media only screen and (min-width:42.5em)
+  // 680
+  // p
+  //   column-count: 2
+
+// @media only screen and (min-width:55em)
+  // 880
+
+
+// @media only screen and (min-width:67.5em)
+  // 1080
+
+
+// @media only screen and (min-width:80em)
+  // 1280
+  // p
+  //   column-count: 3
+
+// @media only screen and (min-width:92.5em)
+  // 1480
+
+@media only screen and (min-width: 105em)
+  :root
+    // changing scales and base
+    --base-min: var(--base-max)
+    --modular1: var(--modular2)
+
+  .fluidtype h1
+    font-size: var(--h1-size)
+    line-height: (112.5/90.4413)
+    margin: .331706864em auto // 30px
+
+  .fluidtype h2
+    font-size: var(--h2-size)
+    line-height: (90/63.9613)
+    margin: .469033618766em auto
+
+  .fluidtype h3
+    font-size: var(--h3-size)
+    line-height: (67.5/45.2342)
+    margin: (30/45.2342)+em auto
+
+  .fluidtype h4
+    font-size: var(--h4-size)
+    line-height: (52.5/31.9903)
+    margin: (15/31.9903)+em auto
+
+  .fluidtype h5
+    font-size: var(--h5-size)
+    line-height: (37.5/22.624)
+    margin: (15/22.624)+em auto
+
+  .fluidtype h6
+    font-size: var(--h6-size)
+
+  .fluidtype p
+    font-size: var(--p-size)

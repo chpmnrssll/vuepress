@@ -5,7 +5,7 @@ module.exports = {
   evergreen: true,
   // markdown: {},
   themeConfig: {
-    footer: 'GPL v3 Licensed | Copyright © 2018-present Russell Chapman',
+    footer: 'Copyright © 2018-present Russell Chapman',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About', link: '/about/' },

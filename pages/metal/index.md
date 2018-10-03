@@ -1,8 +1,9 @@
 ---
 layout: page
-image: /assets/backgrounds/spider.gif
+hero: /assets/backgrounds/spider.mp4
+poster: /assets/backgrounds/spiderPoster.jpg
 title: Metal Insects
-#tagline: With Raid
+tagline: Raid Resistant
 lastUpdated: 2018-06-25T00:00:00.000Z
 tags: [ Nonsense ]
 category: [ Article ]

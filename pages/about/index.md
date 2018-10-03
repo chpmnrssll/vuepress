@@ -1,6 +1,7 @@
 ---
 layout: page
-image: /assets/backgrounds/gears.gif
+hero: /assets/backgrounds/gears.mp4
+poster: /assets/backgrounds/gearsPoster.jpg
 title: About
 tagline: All the Things
 lastUpdated: 2018-08-26T00:00:00.000Z

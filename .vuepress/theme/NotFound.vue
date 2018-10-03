@@ -1,9 +1,15 @@
 <template>
   <div class="theme-container">
-    <header class="header gradientOverlay">
-      <img class="image" src="/aluminium-spider/assets/deadLink.gif" alt="Dead Link">
-      <h1 class="title">404</h1>
-      <p class="tagline">{{ getMsg() }}</p>
+    <header class="header">
+      <section class="background">
+        <video class="hero" :poster="$withBase('/assets/backgrounds/deadLinkPoster.jpg')" alt="Dead Link" autoplay loop muted playsinline>
+          <source :src="$withBase('/assets/backgrounds/deadLink.mp4')" type="video/mp4">
+        </video>
+      </section>
+      <section class="foreground">
+        <h1 class="title">404</h1>
+        <h2 class="tagline">{{ getMsg() }}</h2>
+      </section>
     </header>
   </div>
 </template>

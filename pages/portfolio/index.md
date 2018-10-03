@@ -1,6 +1,7 @@
 ---
 layout: page
-image: /assets/backgrounds/filesOnAShelf.gif
+hero: /assets/backgrounds/filesOnAShelf.mp4
+poster: /assets/backgrounds/filesOnAShelfPoster.jpg
 title: Development Portfolio
 tagline: Professional Experience Points
 lastUpdated: 2018-3-29T00:00:00.000Z
