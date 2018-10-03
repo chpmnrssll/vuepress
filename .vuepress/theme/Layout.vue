@@ -53,9 +53,6 @@ export default {
     this.$router.afterEach(() => {
       nprogress.done();
     });
-  },
-
-  methods: {
   }
 };
 </script>

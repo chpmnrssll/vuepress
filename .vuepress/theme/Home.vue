@@ -2,8 +2,11 @@
   <div class="home">
     <header class="header">
       <section class="background">
-        <video class="hero" v-if="this.$page.frontmatter.hero" :poster="$withBase(this.$page.frontmatter.poster)" :alt="this.$page.frontmatter.altText" autoplay loop muted playsinline>
-          <source :src="$withBase(this.$page.frontmatter.hero)" type="video/mp4">
+        <video class="hero lazyLoad" v-if="this.$page.frontmatter.hero"
+          :data-src="$withBase(this.$page.frontmatter.hero)"
+          :poster="$withBase(this.$page.frontmatter.poster)"
+          :alt="this.$page.frontmatter.altText"
+          autoplay loop muted playsinline>
         </video>
       </section>
       <section class="foreground">
@@ -19,10 +22,15 @@
       <div class="features">
         <NavLink class="feature" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page')" :key="page.key" :url="page.path">
           <section class="background">
-            <video v-if="page.frontmatter.hero" :poster="$withBase(page.frontmatter.poster)" :alt="page.frontmatter.altText" autoplay loop muted playsinline>
-              <source :src="$withBase(page.frontmatter.hero)" type="video/mp4">
+            <video class="lazyLoad" v-if="page.frontmatter.hero"
+              :data-src="$withBase(page.frontmatter.hero)"
+              :poster="$withBase(page.frontmatter.poster)"
+              :alt="page.frontmatter.altText"
+              autoplay loop muted playsinline>
             </video>
-            <img v-else-if="page.frontmatter.image" :src="$withBase(page.frontmatter.image)" :alt="page.frontmatter.altText">
+            <img class="lazyLoad" v-else-if="page.frontmatter.image"
+              :data-src="$withBase(page.frontmatter.image)"
+              :alt="page.frontmatter.altText">
           </section>
           <section class="foreground">
             <h2 class="title">{{ page.title }}</h2>
@@ -32,8 +40,11 @@
         </NavLink>
         <NavLink class="feature" :url="'/404/'">
           <section class="background">
-            <video :poster="$withBase('/assets/backgrounds/deadLinkPoster.jpg')" :alt="'404 Not Found'" autoplay loop muted playsinline>
-              <source :src="$withBase('/assets/backgrounds/deadLink.mp4')" type="video/mp4">
+            <video class="lazyLoad"
+              :data-src="$withBase('/assets/backgrounds/deadLink.mp4')"
+              :poster="$withBase('/assets/backgrounds/deadLinkPoster.jpg')"
+              :alt="'404 Not Found'"
+              autoplay loop muted playsinline>
             </video>
           </section>
           <section class="foreground">
@@ -53,19 +64,24 @@
 </template>
 
 <script>
-import NavLink from './NavLink.vue'
+import NavLink from "./NavLink.vue";
+import { LazyLoader } from "./LazyLoader";
 
 export default {
   components: { NavLink },
   computed: {
-    actionLink () {
+    actionLink() {
       return {
         link: this.$page.frontmatter.actionLink,
         text: this.$page.frontmatter.actionText
-      }
+      };
     }
+  },
+  mounted() {
+    const loader = new LazyLoader();
+    loader.watch();
   }
-}
+};
 </script>
 
 <style lang="stylus">
@@ -133,22 +149,22 @@ overflow-x hidden
       width 100%
       .title
         border-bottom 1px solid lighten(desaturate($secondaryColor, 20%), 40%)
-        color darken(saturate($primaryColor, 30%), 30%)
+        color darken(saturate($primaryColor, 20%), 40%)
         font-size 1.25rem
         margin .5rem
         text-align right
         text-shadow 0 0 3px $color-primary-dark, 1px 2px 3px $color-primary-darkest
       .tagline
-        color lighten(desaturate($secondaryColor, 20%), 20%)
+        color lighten(desaturate($secondaryColor, 20%), 10%)
         font-size .75rem
         font-family 'Teko'
         font-style italic
         font-weight lighter
         margin -.25rem .6rem
         text-align right
-        text-shadow 1px 0 3px $color-secondary-dark, 1px 1px 1px $color-secondary-dark
+        // text-shadow 1px 0 3px $color-secondary-dark, 1px 1px 1px $color-secondary-dark
       .excerpt
-        color darken(saturate($primaryColor, 30%), 60%)
+        color darken(saturate($primaryColor, 30%), 50%)
         margin 0 1rem
 
 // 4k

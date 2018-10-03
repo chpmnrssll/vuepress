@@ -2,14 +2,23 @@
   <div class="page">
     <header class="header">
       <section class="background">
-        <video class="hero" v-if="this.$page.frontmatter.hero" :poster="$withBase(this.$page.frontmatter.poster)" :alt="this.$page.frontmatter.altText" autoplay loop muted playsinline>
-          <source :src="$withBase(this.$page.frontmatter.hero)" type="video/mp4">
+        <video class="hero lazyLoad" v-if="this.$page.frontmatter.hero"
+          :data-src="$withBase(this.$page.frontmatter.hero)"
+          :poster="$withBase(this.$page.frontmatter.poster)"
+          :alt="this.$page.frontmatter.altText"
+          autoplay loop muted playsinline>
         </video>
-        <img class="hero" v-else-if="this.$page.frontmatter.image" :src="$withBase(this.$page.frontmatter.image)" :alt="this.$page.frontmatter.altText">
+        <img class="hero lazyLoad" v-else-if="this.$page.frontmatter.image"
+          :data-src="$withBase(this.$page.frontmatter.image)"
+          :alt="this.$page.frontmatter.altText">
       </section>
       <section class="foreground">
-        <h1 class="title" v-if="this.$page.frontmatter.title">{{ this.$page.frontmatter.title }}</h1>
-        <div class="tagline" v-if="this.$page.frontmatter.tagline">{{ this.$page.frontmatter.tagline }}</div>
+        <h1 class="title" v-if="this.$page.frontmatter.title">
+          {{ this.$page.frontmatter.title }}
+        </h1>
+        <div class="tagline" v-if="this.$page.frontmatter.tagline">
+          {{ this.$page.frontmatter.tagline }}
+        </div>
       </section>
     </header>
     <Content :custom="false"/>
@@ -31,6 +40,7 @@
 
 <script>
 import { resolvePage, normalize, outboundRE, endingSlashRE } from "./util";
+import { LazyLoader } from "./LazyLoader";
 
 export default {
   props: ["sidebarItems"],
@@ -70,8 +80,10 @@ export default {
       }
     }
   },
-
-  methods: {}
+  mounted() {
+    const loader = new LazyLoader();
+    loader.watch();
+  }
 };
 
 function resolvePrev(page, items) {
