@@ -20,7 +20,7 @@
     </header>
     <main>
       <div class="features">
-        <NavLink class="feature" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page')" :key="page.key" :url="page.path">
+        <NavLink class="feature header" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page')" :key="page.key" :url="page.path">
           <section class="background">
             <video class="lazyLoad" v-if="page.frontmatter.hero"
               :data-src="$withBase(page.frontmatter.hero)"
@@ -34,11 +34,11 @@
           </section>
           <section class="foreground">
             <h2 class="title">{{ page.title }}</h2>
-            <h3 class="tagline">{{ page.frontmatter.tagline }}</h3>
+            <div class="tagline">{{ page.frontmatter.tagline }}</div>
             <div class="excerpt" v-html="page.excerpt"/>
           </section>
         </NavLink>
-        <NavLink class="feature" :url="'/404/'">
+        <NavLink class="feature header" :url="'/404/'">
           <section class="background">
             <video class="lazyLoad"
               :data-src="$withBase('/assets/backgrounds/deadLink.mp4')"
@@ -49,7 +49,7 @@
           </section>
           <section class="foreground">
             <h2 class="title">404</h2>
-            <h3 class="tagline">Not Found</h3>
+            <div class="tagline">Dead Link</div>
           </section>
         </NavLink>
       </div>
@@ -98,7 +98,7 @@ overflow-x hidden
     grid-gap 1rem 1rem
 
   .feature
-    box-shadow 1px 2px 8px hsla($primaryColor-h, $primaryColor-s + 30, $primaryColor-l - 40, .5)
+    box-shadow -1px 2px 8px darken(saturate($primaryColor, 40%), 60%)
     height 0
     padding-top 56.25%
     position relative
@@ -106,63 +106,19 @@ overflow-x hidden
 
     &::before
       background radial-gradient(circle at top right, $color-gradient-start, $color-gradient-end)
-      content ''
-      height 100%
-      left 0
-      mix-blend-mode color
-      opacity .5
-      position absolute
-      top 0
-      width 100%
-      z-index -1
 
     &::after
       background radial-gradient(circle at top right, rgba(255, 255, 255, .95), rgba(255, 255, 255, .35))
-      content ''
-      height 100%
-      left 0
-      position absolute
-      top 0
-      width 100%
-      z-index -2
 
     .background
       height 100%
-      left 0
-      overflow hidden
-      position absolute
-      top 0
-      width 100%
-      z-index -3
-      *
-        height 100%
-        object-fit cover
-        width 100%
 
     .foreground
-      display flex
-      flex-direction column
-      height 100%
-      left 0
-      position absolute
-      top 0
-      width 100%
       .title
         border-bottom 1px solid lighten(desaturate($secondaryColor, 20%), 40%)
-        color darken(saturate($primaryColor, 20%), 40%)
-        font-size 1.25rem
-        margin .5rem
-        text-align right
-        text-shadow 0 0 3px $color-primary-dark, 1px 2px 3px $color-primary-darkest
+        // font-size 1.25rem
       .tagline
-        color lighten(desaturate($secondaryColor, 20%), 10%)
-        font-size .75rem
-        font-family 'Teko'
-        font-style italic
-        font-weight lighter
-        margin -.25rem .6rem
-        text-align right
-        // text-shadow 1px 0 3px $color-secondary-dark, 1px 1px 1px $color-secondary-dark
+        // font-size .75rem
       .excerpt
         color darken(saturate($primaryColor, 30%), 50%)
         margin 0 1rem

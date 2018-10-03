@@ -27,8 +27,10 @@
 
   .background
     height $headerHeight
+    left 0
     overflow hidden
     position absolute
+    top 0
     width 100%
     z-index -3
     *
@@ -39,19 +41,19 @@
   .foreground
     display flex
     flex-direction column
+    height 100%
+    left 0
     position absolute
-    text-align right
+    top 0
     width 100%
     .title
       color darken(saturate($primaryColor, 20%), 40%)
-      margin 0
-      padding 0 .5rem
-      text-shadow 0 0 3px $color-primary-dark, 1px 2px 3px $color-primary-darkest
+      margin .5rem
+      text-align right
     .tagline
       color lighten(desaturate($secondaryColor, 20%), 20%)
       font-family 'Teko'
       font-style italic
       font-weight lighter
-      margin 0
-      padding 0 .5rem
-      text-shadow 1px 0 3px $color-secondary-dark, 1px 1px 1px $color-secondary-dark
+      margin -.25rem .6rem
+      text-align right
