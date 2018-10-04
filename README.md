@@ -6,7 +6,6 @@ title: Aluminium Spider
 altText: Aluminium Spider
 tagline: Vuepress + Github Pages
 ---
-README.md contents...
-https://stevenloria.com/responsive-typography/
-http://redonion.se/responsive-typography-with-css-custom-properties-css-variables/
-https://daverupert.com/2018/02/cheapass-parallax/
+- https://stevenloria.com/responsive-typography/
+- https://daverupert.com/2018/02/cheapass-parallax/
+- http://redonion.se/responsive-typography-with-css-custom-properties-css-variables/

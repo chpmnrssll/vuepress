@@ -6,8 +6,7 @@ export class LazyLoader {
     };
     this.className = className;
     this.observer = new window.IntersectionObserver(this.handler, this.options);
-    this.firstRun = true;
-    // this.watch();
+    this.watch();
   }
 
   handler (entries, observer) {
@@ -27,15 +26,8 @@ export class LazyLoader {
   }
 
   watch () {
-    const that = this;
     document.querySelectorAll(this.className).forEach(element => {
-      if (!that.firstRun) {
-        console.log(element);
-      }
       this.observer.observe(element);
     });
-    if (this.firstRun) {
-      this.firstRun = false;
-    }
   }
 }

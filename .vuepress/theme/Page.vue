@@ -116,6 +116,14 @@ function find(page, items, offset) {
 @import './styles/config.styl'
 @require './styles/wrapper.styl'
 
+.thumbnail
+  height 16vh
+  max-width 16vw
+
+.tiny
+  height 8vh
+  max-width 8vw
+
 .page
   padding-bottom 1rem
   .image-m
