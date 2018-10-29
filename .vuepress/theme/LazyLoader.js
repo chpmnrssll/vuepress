@@ -1,5 +1,5 @@
 export class LazyLoader {
-  constructor (rootMargin = '0px', threshold = 0.006, className = '.lazyLoad') {
+  constructor (rootMargin = '100%', threshold = 0.006, className = '.lazyLoad') {
     this.options = {
       rootMargin: rootMargin,
       threshold: threshold
