@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <header class="header">
+    <!-- <header class="header">
       <section class="background">
         <video class="hero lazyLoad" v-if="this.$page.frontmatter.hero"
           :data-src="$withBase(this.$page.frontmatter.hero)"
@@ -17,7 +17,7 @@
           {{ this.$page.frontmatter.tagline }}
         </div>
       </section>
-    </header>
+    </header> -->
     <main>
       <div class="features">
         <NavLink class="feature header" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page')" :key="page.key" :url="page.path">
@@ -36,20 +36,6 @@
             <h2 class="title">{{ page.title }}</h2>
             <div class="tagline">{{ page.frontmatter.tagline }}</div>
             <div class="excerpt" v-html="page.excerpt"/>
-          </section>
-        </NavLink>
-        <NavLink class="feature header" :url="'/404/'">
-          <section class="background">
-            <video class="lazyLoad"
-              :data-src="$withBase('/assets/backgrounds/deadLink.mp4')"
-              :poster="$withBase('/assets/backgrounds/deadLinkPoster.jpg')"
-              :alt="'404 Not Found'"
-              autoplay loop muted playsinline>
-            </video>
-          </section>
-          <section class="foreground">
-            <h2 class="title">404</h2>
-            <div class="tagline">Dead Link</div>
           </section>
         </NavLink>
       </div>
