@@ -8,14 +8,61 @@ lastUpdated: 2018-3-29T00:00:00.000Z
 tags: [ Featured Programming Professional Portfolio ]
 category: [ About ]
 ---
+
+### Taboola/Outbrain Recommended Content Clone
+
+Jun, 2018
+
+Requires minimum amount of work to implement from website authors and can be added to any website with a single line of code.
+Queries a backend server with the current page url and title which responds with a set of recommended links.
+Displays the recommend links in a responsive grid (ranging from 1x2 to 3x3), typically positioned below a news or blog article.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/afterDawnShowcase.png')" alt=""/>
+
+- Javascript
+- CSS Grid
+- Ajax
+
+<a href="https://fin.afterdawn.com/uutiset/artikkeli.cfm/2018/06/01/canon-lopetti-viimeisenkin-filmikameran-myymisen">Link</a>
+
+### Multithreaded Downloader
+
+May, 2018
+
+A browser based multi-threaded downloader implemented in vanilla JavaScript. Fetches parts of a file using the HTTP Range header and downloads those pieces in parallel. When the pieces have all been downloaded, the original file is re-assembled and saved in the browser's Downloads folder.
+
+<img class="lazyLoad tiny" :data-src="$withBase('/assets/backblazeB2.png')" alt="Backblaze B2"/>
+<img class="lazyLoad tiny" :data-src="$withBase('/assets/googleDrive.jpg')" alt="Google Drive"/>
+
+- Javascript
+- HTML Filesystem
+- WhatWG Streams
+
+<a :href="$withBase('/pages/portfolio/multithread/')">More Info</a>
+
+### Modify Jekyll Theme
+
+Apr, 2018
+
+Updated from Font Awesome v4 to v5 and modified theme to display more social media links.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/identity-jekyll-theme-updates.jpg')" alt="Jekyll Theme"/>
+
+- Jekyll
+- Github
+
+<blockquote>
+  <cite>Will certainly shortlist for future efforts! &mdash; DK</cite>
+</blockquote>
+
 ### Membership Directory Plugin
 
 Jun, 2013
 
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/MCRA/MCRAHome.png">
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/MCRA/PublicDirectorySearchChanges.png">
-
 WordPress plug-in to replace the default user system. Member accounts, profile management, public member directory.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/MCRA/MCRAHome.png')">
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/MCRA/PublicDirectorySearchChanges.png')">
 
 - PHP
 - SQL
@@ -24,15 +71,15 @@ WordPress plug-in to replace the default user system. Member accounts, profile m
 - JavaScript
 - jQuery
 
-<a href="/aluminium-spider/pages/mcra/">More Info</a>
+<a :href="$withBase('/pages/portfolio/mcra/')">More Info</a>
 
 ### Joomla Extension
 
 Mar, 2013
 
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/JoomlaExtFilters.png" alt="Joomla Extension">
-
 Joomla extension development, UI
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/JoomlaExtFilters.png')" alt="Joomla Extension">
 
 - PHP
 - Joomla
@@ -49,11 +96,11 @@ Joomla extension development, UI
 
 Nov, 2012
 
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/HoneyStingerHome.png" alt="Honey Stinger Home" />
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/HoneyStinger.png" alt="Honey Stinger">
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/HoneyStingerLogo.png" alt="Honey Stinger Logo" />
-
 Tables to HTML5 layout conversion.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/HoneyStingerHome.png')" alt="Honey Stinger Home" />
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/HoneyStinger.png')" alt="Honey Stinger">
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/HoneyStingerLogo.png')" alt="Honey Stinger Logo" />
 
 - HTML5
 - CSS3
@@ -69,10 +116,10 @@ Tables to HTML5 layout conversion.
 
 Oct, 2012
 
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/revClaims.png" alt="Rev Claims" />
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/wizardForm.png" alt="Wizzard Form">
-
 Long patient form conversion to semantic HTML5, multi-page, wizard-type form. E-Mail notifications on submission, monthly CSV reports, client-side form validation, image captcha.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/revClaims.png')" alt="Rev Claims" />
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/wizardForm.png')" alt="Wizzard Form">
 
 - PHP
 - JavaScript
@@ -91,11 +138,11 @@ Long patient form conversion to semantic HTML5, multi-page, wizard-type form. E-
 
 Oct, 2012
 
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/starmazy.png" alt="StarMazy">
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/StarMazyGames/Image2.png" alt="StarMazyGames" />
-<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/StarMazyGames/starmazy2.png" alt="StarMazy2" />
-
 Adobe Flash to HTML5/JavaScript user interface conversion.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/starmazy.png')" alt="StarMazy">
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/StarMazyGames/Image2.png')" alt="StarMazyGames" />
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/StarMazyGames/starmazy2.png')" alt="StarMazy2" />
 
 - JavaScript
 - jQuery
@@ -109,7 +156,7 @@ Adobe Flash to HTML5/JavaScript user interface conversion.
   <cite>&mdash; Don, Xtreme Technologies</cite>
 </blockquote>
 
-### Content Management System</h2>
+### Content Management System
 
 Sep, 2013
 
@@ -123,72 +170,47 @@ Custom content management system built with PHP using vanilla MVC architecture.
 - HTML5
 - CSS3
 
-<a href="/aluminium-spider/pages/mvc/">More Info</a>
+<a :href="$withBase('/pages/portfolio/mvc/')">More Info</a>
 
-<!--
-<section class="card">
-  <header class="card__header gradient-overlay">
-    ### Colorado Casket Company</h2>
-    <h3>Jun 20, 2012</h3>
-    <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/casket.png" alt="CCC">
-  </header>
-  <section class="card__body">
-    <p>
-      Advertising, product, and info site. Content management system, product catalog db, image resizing and caching on the server.
-    </p>
-    <ul>
-      - PHP
-      - SQL
-      - ImageMagic
-      - HTML5
-      - CSS3
-    </ul>
-    <del><a href="http://www.coloradocasketcompany.com/">Link</a></del>
-    <blockquote>
-      <cite>&mdash; Sue Fletcher</cite>
-    </blockquote>
-  </section>
-</section>
 
-<section class="card card--alt">
-  <header class="card__header gradient-overlay">
-    ### Mr Tom's Critters</h2>
-    <h3>Oct 2, 2012</h3>
-    <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/critter.png" alt="Critters">
-  </header>
-  <section class="card__body">
-    <p>
-      Content management system and design for animal resuce and adoption site.
-    </p>
-    <ul>
-      - PHP
-      - SQL
-      - HTML5
-      - CSS3
-    </ul>
-    <del><a href="temp/mrTomsCritters/index.php">Demo</a></del>
-  </section>
-</section>
+### Colorado Casket Company
 
-<section class="card">
-  <header class="card__header gradient-overlay">
-    ### Photo Gallery</h2>
-    <h3>Aug 14, 2012</h3>
-    <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/professional/gallery.png" alt="Gallery">
-  </header>
-  <section class="card__body">
-    <p>
-      Content management system and design for a photography portfolio.
-    </p>
-    <ul>
-      - PHP
-      - SQL
-      - HTML5
-      - CSS3
-      - JavaScript
-      - jQuery
-    </ul>
-    <del><a href="/temp/gallery/index.php">Demo</a></del>
-  </section>
-</section>
--->
+Jun 20, 2012
+
+Content management system, product catalog, server side image resizing and caching.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/casket.png')" alt="CCC">
+
+- PHP
+- SQL
+- ImageMagic
+- HTML5
+- CSS3
+
+### Mr Tom's Critters
+
+Oct 2, 2012
+
+Content management system and design for animal resuce and adoption site.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/critter.png')" alt="Critters">
+
+- PHP
+- SQL
+- HTML5
+- CSS3
+
+### Photo Gallery
+
+Aug 14, 2012
+
+Content management system and design for a photography portfolio site.
+
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/gallery.png')" alt="Gallery">
+
+- PHP
+- SQL
+- HTML5
+- CSS3
+- JavaScript
+- jQuery

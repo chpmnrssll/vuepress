@@ -15,7 +15,7 @@ category: [ About ]
 
 Russell has been involved with the internet and programming since the mid 90's. He has studied a wide variety of programming languages and built everything from REST APIs, content management systems, single page apps, and more.
 
-When not writing code you'll often find Russell working on a farm truck, taking apart an engine, or playing guitar.
+When not writing code you'll often find Russell working on a truck, taking apart an engine, or playing guitar.
 
 ### Skills
 

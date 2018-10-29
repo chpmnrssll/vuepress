@@ -89,14 +89,19 @@ PromiseQueue provides concurrency by using a queue of promises. It will automati
 ## Demo
 
 <a href="https://backblaze-b2-samples.github.io/multithreaded-downloader-js/examples/backblaze.html">
-  <img class="image-m" :src="$withBase('/assets/backblazeB2.png')" alt="Backblaze B2"/>
+  <img class="lazyLoad tiny" :data-src="$withBase('/assets/backblazeB2.png')" alt="Backblaze B2"/>
 </a>
 
 <a href="https://backblaze-b2-samples.github.io/multithreaded-downloader-js/examples/googleDrive.html">
-  <img class="image-m" :src="$withBase('/assets/googleDrive.jpg')" alt="Google Drive"/>
+  <img class="lazyLoad tiny" :data-src="$withBase('/assets/googleDrive.jpg')" alt="Google Drive"/>
 </a>
 
--   [Source](https://github.com/Backblaze-B2-Samples/multithreaded-downloader-js)
+## Source
+
+<a href="https://github.com/Backblaze-B2-Samples/multithreaded-downloader-js">
+  <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoGithub.png')" alt="Github"/>
+</a>
+
 
 ## Reference
 
