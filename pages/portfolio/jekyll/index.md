@@ -1,7 +1,6 @@
 ---
 layout: page
-#hero: /assets/backgrounds/servers.mp4
-#poster: /assets/backgrounds/serversPoster.jpg
+image: /assets/professional/jekyllSite1.png
 title: Jekyll Portfolio Site
 tagline: Static PWA
 lastUpdated: 2018-10-04T00:00:00.000Z
