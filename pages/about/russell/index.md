@@ -5,16 +5,15 @@ poster: /assets/about/primitiveAvatarPoster.jpg
 title: About
 tagline: Russell Chapman
 lastUpdated: 2018-3-28T00:00:00.000Z
-tags: [ Featured Programming ]
-category: [ About ]
+tags: [ Featured, Programming ]
+category: About
 ---
 
 [[toc]]
 
 ### About
 
-Russell has been involved with the internet and programming since the mid 90's. He has studied a wide variety of programming languages and built everything from REST APIs, content management systems, single page apps, and more.
-
+Russell has been involved with the internet and programming since the mid 90's.
 When not writing code you'll often find Russell working on a truck, taking apart an engine, or playing guitar.
 
 ### Skills

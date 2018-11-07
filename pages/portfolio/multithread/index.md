@@ -5,8 +5,8 @@ poster: /assets/backgrounds/serversPoster.jpg
 title: Multithreaded Downloader
 tagline: Using HTTP Range Requests
 lastUpdated: 2018-08-27T00:00:00.000Z
-tags: [ Javascript Async WhatWG Streams ]
-category: [ Article ]
+tags: [ Javascript, Async, WhatWG Streams ]
+category: Portfolio
 ---
 
 A browser based multi-threaded downloader implemented in vanilla JavaScript. <!-- more --> Fetches parts of a file using the HTTP Range header and downloads those pieces in parallel. When the pieces have all been downloaded, the original file is re-assembled and saved in the browser's Downloads folder.

@@ -4,8 +4,8 @@ image: /assets/professional/MVCSite.png
 title: Content Management System
 tagline: CMS with PHP and MySQL/Activerecord
 lastUpdated: 2018-1-20T00:00:00.000Z
-tags: Programming Professional Portfolio
-category: [ About ]
+tags: [ Programming, Professional, Portfolio ]
+category: Portfolio
 ---
 
 ### Overview

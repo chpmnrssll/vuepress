@@ -5,8 +5,8 @@ poster: /assets/backgrounds/filesOnAShelfPoster.jpg
 title: Development Portfolio
 tagline: Professional Experience Points
 lastUpdated: 2018-3-29T00:00:00.000Z
-tags: [ Featured Programming Professional Portfolio ]
-category: [ About ]
+tags: [ Featured, Programming, Professional ]
+category: Portfolio
 ---
 
 ### Taboola/Outbrain Recommended Content Clone

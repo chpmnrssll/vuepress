@@ -20,7 +20,7 @@
     </header> -->
     <main>
       <div class="features">
-        <NavLink class="feature header" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page')" :key="page.key" :url="page.path">
+        <NavLink class="feature header" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page').filter(page => page.frontmatter.tags.includes('Featured'))" :key="page.key" :url="page.path">
           <section class="background">
             <video class="lazyLoad" v-if="page.frontmatter.hero"
               :data-src="$withBase(page.frontmatter.hero)"

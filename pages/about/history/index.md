@@ -5,8 +5,8 @@ poster: /assets/backgrounds/roadBlueSkyPoster.jpg
 title: Development History
 tagline: Old School
 lastUpdated: 2018-10-28T00:00:00.000Z
-tags: [ Featured Programming Professional Portfolio ]
-category: [ About ]
+tags: [ Featured, Programming, Professional ]
+category: About
 ---
 
 ### MVC CMS App
