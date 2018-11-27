@@ -2,12 +2,17 @@
   <div class="home">
     <!-- <header class="header">
       <section class="background">
-        <video class="hero lazyLoad" v-if="this.$page.frontmatter.hero"
+        <video
+          class="hero lazyLoad"
+          v-if="this.$page.frontmatter.hero"
           :data-src="$withBase(this.$page.frontmatter.hero)"
           :poster="$withBase(this.$page.frontmatter.poster)"
           :alt="this.$page.frontmatter.altText"
-          autoplay loop muted playsinline>
-        </video>
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
       </section>
       <section class="foreground">
         <h1 class="title" v-if="this.$page.frontmatter.title">
@@ -20,28 +25,43 @@
     </header> -->
     <main>
       <div class="features">
-        <NavLink class="feature header" v-for="page in this.$site.pages.filter(page => page.frontmatter.layout === 'page').filter(page => page.frontmatter.tags.includes('Featured'))" :key="page.key" :url="page.path">
+        <NavLink
+          class="feature header"
+          v-for="page in this.$site.pages
+            .filter(page => page.frontmatter.layout === 'page')"
+          :key="page.key"
+          :url="page.path"
+        >
+        <!-- .filter(page => page.frontmatter.tags.includes('Featured'))" -->
           <section class="background">
-            <video class="lazyLoad" v-if="page.frontmatter.hero"
+            <video
+              class="lazyLoad"
+              v-if="page.frontmatter.hero"
               :data-src="$withBase(page.frontmatter.hero)"
               :poster="$withBase(page.frontmatter.poster)"
               :alt="page.frontmatter.altText"
-              autoplay loop muted playsinline>
-            </video>
-            <img class="lazyLoad" v-else-if="page.frontmatter.image"
+              autoplay
+              loop
+              muted
+              playsinline
+            ></video>
+            <img
+              class="lazyLoad"
+              v-else-if="page.frontmatter.image"
               :data-src="$withBase(page.frontmatter.image)"
-              :alt="page.frontmatter.altText">
+              :alt="page.frontmatter.altText"
+            />
           </section>
           <section class="foreground">
             <h2 class="title">{{ page.title }}</h2>
             <div class="tagline">{{ page.frontmatter.tagline }}</div>
-            <div class="excerpt" v-html="page.excerpt"/>
+            <div class="excerpt" v-html="page.excerpt" />
           </section>
         </NavLink>
       </div>
     </main>
 
-    <Content custom/>
+    <content custom />
 
     <footer class="footer">
       <div class="text">{{ this.$site.themeConfig.footer }}</div>
@@ -52,6 +72,7 @@
 <script>
 import NavLink from "./NavLink.vue";
 import { LazyLoader } from "./LazyLoader";
+import { autoplay } from "./autoplay";
 
 export default {
   components: { NavLink },
@@ -66,6 +87,7 @@ export default {
   mounted() {
     const loader = new LazyLoader();
     loader.watch();
+    // autoplay('.lazyLoad');
   }
 };
 </script>
@@ -98,6 +120,8 @@ overflow-x hidden
 
     .background
       height 100%
+      img
+        filter: blur(2px)
 
     .foreground
       .title

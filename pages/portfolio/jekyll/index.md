@@ -16,5 +16,5 @@ Sep, 2018
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/jekyllSite2.png')" alt=""/>
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/jekyllSite3.png')" alt=""/>
 <br/>
-<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/logo/logoJekyll.png')" alt="Jekyll"/>
-<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/logo/logoGithub.png')" alt="Github"/>
+<img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoJekyll.png')" alt="Jekyll"/>
+<img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoGithub.png')" alt="Github"/>

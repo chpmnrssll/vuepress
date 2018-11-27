@@ -1,17 +1,6 @@
 <template>
-  <div class="page">
+  <div class="demo">
     <header class="header">
-      <section class="background">
-        <video class="hero lazyLoad" v-if="this.$page.frontmatter.hero"
-          :data-src="$withBase(this.$page.frontmatter.hero)"
-          :poster="$withBase(this.$page.frontmatter.poster)"
-          :alt="this.$page.frontmatter.altText"
-          autoplay loop muted playsinline>
-        </video>
-        <img class="hero lazyLoad" v-else-if="this.$page.frontmatter.image"
-          :data-src="$withBase(this.$page.frontmatter.image)"
-          :alt="this.$page.frontmatter.altText">
-      </section>
       <section class="foreground">
         <h1 class="title" v-if="this.$page.frontmatter.title">
           {{ this.$page.frontmatter.title }}
@@ -41,8 +30,7 @@
 <script>
 import { resolvePage, normalize, outboundRE, endingSlashRE } from "./util";
 import { LazyLoader } from "./LazyLoader";
-import { autoplay } from './autoplay'
-import mediumZoom from 'medium-zoom';
+import { autoplay } from './autoplay';
 
 export default {
   props: ["sidebarItems"],
@@ -86,9 +74,6 @@ export default {
     const loader = new LazyLoader();
     loader.watch();
     // autoplay('.lazyLoad');
-    mediumZoom('.thumbnail', {
-      background: '#000e'
-    });
   }
 };
 
@@ -121,11 +106,6 @@ function find(page, items, offset) {
 <style lang="stylus">
 @import './styles/config.styl'
 @require './styles/wrapper.styl'
-
-.header
-  .background
-    img
-      filter: blur(3px)
 
 .thumbnail
   height 16vh

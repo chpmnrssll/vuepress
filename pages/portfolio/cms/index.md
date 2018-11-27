@@ -14,9 +14,9 @@ Sep, 2013
 
 Custom content management system built with PHP using MySQL/Activerecord.
 
-<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/logo/logoHTML5.png')" alt="HTML5"/>
-<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/logo/logoCSS3.png')" alt="CSS3"/>
-<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/logo/logoJavascript.png')" alt="JavaScript"/>
+<img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoHTML5.png')" alt="HTML5"/>
+<img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoCSS3.png')" alt="CSS3"/>
+<img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoJavascript.png')" alt="JavaScript"/>
 <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoJQuery.png')" alt="jQuery"/>
 <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoPHP.png')" alt="PHP"/>
 <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoMySQL.png')" alt="MySQL"/>

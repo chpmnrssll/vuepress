@@ -31,13 +31,13 @@ When not writing code you'll often find Russell working on a truck, taking apart
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoSass.png" alt="Sass"/>
 </a>
 <a href="https://en.wikipedia.org/wiki/HTML">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoHTML5.png" alt="HTML5"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoHTML5.png" alt="HTML5"/>
 </a>
 <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoCSS3.png" alt="CSS3"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoCSS3.png" alt="CSS3"/>
 </a>
 <a href="https://en.wikipedia.org/wiki/JavaScript">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoJavascript.png" alt="JavaScript"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoJavascript.png" alt="JavaScript"/>
 </a>
 <a href="https://nodejs.org/">
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoNodeJS.png" alt="Node.js"/>
@@ -55,22 +55,22 @@ When not writing code you'll often find Russell working on a truck, taking apart
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoJekyll.png"/>
 </a>
 <a href="">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoJoomla.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoJoomla.png"/>
 </a>
 <a href="">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoWordpress.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoWordpress.png"/>
 </a>
 <a href="">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoRubyOnRails.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoRubyOnRails.png"/>
 </a>
 <a href="https://bower.io/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoBower.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoBower.png"/>
 </a>
 <a href="https://gruntjs.com/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoGrunt.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoGrunt.png"/>
 </a>
 <a href="https://gulpjs.com/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoGulp.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoGulp.png"/>
 </a>
 <a href="https://github.com/">
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoGithub.png"/>
@@ -79,28 +79,28 @@ When not writing code you'll often find Russell working on a truck, taking apart
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoJQuery.png"/>
 </a>
 <a href="">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoWebComponents.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoWebComponents.png"/>
 </a>
 <a href="">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoPolymer.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoPolymer.png"/>
 </a>
 <a href="">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoAMP.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoAMP.png"/>
 </a>
 <a href="">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoBackbone.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoBackbone.png"/>
 </a>
 <a href="">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoMarionette.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoMarionette.png"/>
 </a>
 <a href="">
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoWebGL.png"/>
 </a>
 <a href="https://en.wikipedia.org/wiki/Perl">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoPerl.png" alt="Perl"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoPerl.png" alt="Perl"/>
 </a>
 <a href="https://www.lua.org/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoLua.png" alt="Lua"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoLua.png" alt="Lua"/>
 </a>
 <a href="https://www.python.org/">
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoPython.png"/>
@@ -109,23 +109,23 @@ When not writing code you'll often find Russell working on a truck, taking apart
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoJava.png" alt="Java"/>
 </a>
 <a href="https://www.debian.org/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/software/linuxDebian.png" alt="Debian Linux"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/software/linuxDebian.png" alt="Debian Linux"/>
 </a>
 <a href="https://www.gnome.org/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/software/linuxGnome.png" alt="Gnome"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/software/linuxGnome.png" alt="Gnome"/>
 </a>
 <a href="https://www.archlinux.org/">
   <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/software/linuxArch.png" alt="Arch Linux"/>
 </a>
 <br/>
 <a href="https://www.upwork.com/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoUpWork.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoUpWork.png"/>
 </a>
 <a href="https://www.elance.com/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoElance.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoElance.png"/>
 </a>
 <a href="https://www.upwork.com/">
-  <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoODesk.png"/>
+  <img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoODesk.png"/>
 </a>
 
 ### Education
@@ -169,9 +169,9 @@ When not writing code you'll often find Russell working on a truck, taking apart
 
 <small>* NASA Scholorship program</small>
 
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/books/C++ProgrammingProgramDesignIncludingDataStructures4thEdition.jpg"/>
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/books/TheIllustrated3DStudioQuickReferenceR4.jpg"/>
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoNASA.png"/>
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/books/C++ProgrammingProgramDesignIncludingDataStructures4thEdition.jpg"/>
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/books/TheIllustrated3DStudioQuickReferenceR4.jpg"/>
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoNASA.png"/>
 
 #### HD-Truck ASE Certification &mdash; 2007
 
@@ -180,9 +180,9 @@ When not writing code you'll often find Russell working on a truck, taking apart
 - Electrical Systems
 - HVAC Systems
 
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/logo/logoASE.svg">
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/automotive/aseT6.jpg"/>
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/automotive/aseT7.jpg"/>
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/logo/logoASE.svg">
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/automotive/aseT6.jpg"/>
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/automotive/aseT7.jpg"/>
 <br/>
 <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/automotive/freightliner.gif"/>
 
@@ -198,10 +198,10 @@ When not writing code you'll often find Russell working on a truck, taking apart
 <a href="https://en.wikipedia.org/wiki/FastTracker_2">
   <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/software/pcFastTracker2.jpg" alt="FastTracker 2"/>
 </a>
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/software/pcVGAPalette.jpg" alt="VGA Palette"/>
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/software/pcVGAPalette.jpg" alt="VGA Palette"/>
 <br/>
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/backgrounds/speedometer.jpg">
-<img class="lazyLoad tiny" data-src="/aluminium-spider/assets/automotive/wrenches.jpg"/>
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/backgrounds/speedometer.jpg">
+<img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/automotive/wrenches.jpg"/>
 <img class="lazyLoad thumbnail" data-src="/aluminium-spider/assets/backgrounds/technician.jpg">
 
 <!--
