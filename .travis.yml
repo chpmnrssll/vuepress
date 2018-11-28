@@ -7,9 +7,9 @@ cache:
 
 script: bash ./deploy.sh
 
-branches:
-  only:
-    -master
+# branches:
+#   only:
+#     -master
 
 deploy:
   provider: pages
