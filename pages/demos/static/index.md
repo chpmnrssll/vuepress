@@ -2,7 +2,7 @@
 layout: demo
 title: Static
 tagline: Demo Effect
-image: /assets/about/Static.png
+image: https://chpmnrssll.github.io/static-assets/about/Static.png
 lastUpdated: 2017-10-17T00:00:00.000Z
 tags: [ Featured, HTML5, Javascript, Canvas, Demo Effect ]
 category: Demos

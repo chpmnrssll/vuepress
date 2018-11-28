@@ -1,7 +1,7 @@
 ---
 layout: page
-hero: /assets/backgrounds/servers.mp4
-poster: /assets/backgrounds/serversPoster.jpg
+hero: https://chpmnrssll.github.io/static-assets/backgrounds/servers.mp4
+poster: https://chpmnrssll.github.io/static-assets/backgrounds/serversPoster.jpg
 title: Multithreaded Downloader
 tagline: Using HTTP Range Requests
 lastUpdated: 2018-08-27T00:00:00.000Z
@@ -89,17 +89,17 @@ PromiseQueue provides concurrency by using a queue of promises. It will automati
 ## Demo
 
 <a href="https://backblaze-b2-samples.github.io/multithreaded-downloader-js/examples/backblaze.html">
-  <img class="lazyLoad tiny" :data-src="$withBase('/assets/backblazeB2.png')" alt="Backblaze B2"/>
+  <img class="lazyLoad tiny" data-src="https://chpmnrssll.github.io/static-assets/backblazeB2.png" alt="Backblaze B2"/>
 </a>
 
 <a href="https://backblaze-b2-samples.github.io/multithreaded-downloader-js/examples/googleDrive.html">
-  <img class="lazyLoad tiny" :data-src="$withBase('/assets/googleDrive.jpg')" alt="Google Drive"/>
+  <img class="lazyLoad tiny" data-src="https://chpmnrssll.github.io/static-assets/googleDrive.jpg" alt="Google Drive"/>
 </a>
 
 ## Source
 
 <a href="https://github.com/Backblaze-B2-Samples/multithreaded-downloader-js">
-  <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoGithub.png')" alt="Github"/>
+  <img class="lazyLoad tiny" data-src="https://chpmnrssll.github.io/static-assets/logo/logoGithub.png" alt="Github"/>
 </a>
 
 
