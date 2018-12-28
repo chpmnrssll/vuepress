@@ -1,7 +1,7 @@
 ---
 layout: page
-hero: https://chpmnrssll.github.io/static-assets/backgrounds/servers.mp4
-poster: https://chpmnrssll.github.io/static-assets/backgrounds/serversPoster.jpg
+hero: /assets/backgrounds/servers.mp4
+poster: /assets/backgrounds/serversPoster.jpg
 title: Multithreaded Downloader
 tagline: Using HTTP Range Requests
 lastUpdated: 2018-08-27T00:00:00.000Z
@@ -9,15 +9,27 @@ tags: [ Javascript, Async, WhatWG Streams ]
 category: Portfolio
 ---
 
-A browser based multi-threaded downloader implemented in vanilla JavaScript. <!-- more --> Fetches parts of a file using the HTTP Range header and downloads those pieces in parallel. When the pieces have all been downloaded, the original file is re-assembled and saved in the browser's Downloads folder.
+A browser based multi-threaded downloader implemented in vanilla JavaScript.
+
+<!-- more -->
+
+Fetches parts of a file using the HTTP Range header and downloads
+those pieces in parallel. When the pieces have all been downloaded, the
+original file is re-assembled and saved in the browser's Downloads folder.
 
 [[toc]]
 
 ## Requirements
 
-The downloader should fetch the file directly from the web browser without a server needed to proxy the file. The download process should not need any client software or browser plugin to be installed. It should allow for resuming an interrupted download, or at least retrying a part of the file that was interrupted.
+The downloader should fetch the file directly from the web browser without a
+server needed to proxy the file. The download process should not need any
+client software or browser plugin to be installed. It should allow for resuming
+an interrupted download, or at least retrying a part of the file that was
+interrupted.
 
-This project will allow us to specify the number of download threads and the size of each request... so we can tune it for specific network conditions, if that is necessary.
+This project will allow us to specify the number of download threads and the
+size of each request... so we can tune it for specific network conditions, if
+that is necessary.
 
 -   Sends HTTP HEAD request to get the file info and calculate number of chunks
 -   Sends HTTP GET requests with "Range: bytes=start-end" header for each chunk
@@ -70,7 +82,8 @@ new MultiThread({
 
 ### Callbacks
 
-Multithread triggers several events that you can attach callbacks to. The callbacks will be called with a single object consisting of the following keys:
+Multithread triggers several events that you can attach callbacks to. The
+callbacks will be called with a single object consisting of the following keys:
 
 -   onStart({ contentLength, chunks })
 -   onFinish({})
@@ -84,24 +97,25 @@ Each individual chunk will also trigger it's own events:
 -   onChunkProgress({ contentLength, loaded, id })
 -   onChunkError({ id, error })
 
-PromiseQueue provides concurrency by using a queue of promises. It will automatically retry a configurable amount of times before triggering either an "onFinish" or "onError" event.
+PromiseQueue provides concurrency by using a queue of promises. It will
+automatically retry a configurable amount of times before triggering either an
+"onFinish" or "onError" event.
 
 ## Demo
 
 <a href="https://backblaze-b2-samples.github.io/multithreaded-downloader-js/examples/backblaze.html">
-  <img class="lazyLoad tiny" data-src="https://chpmnrssll.github.io/static-assets/backblazeB2.png" alt="Backblaze B2"/>
+  <img class="lazyLoad tiny" :data-src="$withBase('/assets/backblazeB2.png')" alt="Backblaze B2"/>
 </a>
 
 <a href="https://backblaze-b2-samples.github.io/multithreaded-downloader-js/examples/googleDrive.html">
-  <img class="lazyLoad tiny" data-src="https://chpmnrssll.github.io/static-assets/googleDrive.jpg" alt="Google Drive"/>
+  <img class="lazyLoad tiny" :data-src="$withBase('/assets/googleDrive.jpg')" alt="Google Drive"/>
 </a>
 
 ## Source
 
 <a href="https://github.com/Backblaze-B2-Samples/multithreaded-downloader-js">
-  <img class="lazyLoad tiny" data-src="https://chpmnrssll.github.io/static-assets/logo/logoGithub.png" alt="Github"/>
+  <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoGithub.png')" alt="Github"/>
 </a>
-
 
 ## Reference
 

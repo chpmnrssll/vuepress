@@ -2,8 +2,8 @@
 layout: page
 title: About
 tagline: This Site
-hero: https://chpmnrssll.github.io/static-assets/backgrounds/miningMachines.mp4
-poster: https://chpmnrssll.github.io/static-assets/backgrounds/miningMachinesPoster.jpg
+hero: /assets/backgrounds/miningMachines.mp4
+poster: /assets/backgrounds/miningMachinesPoster.jpg
 lastUpdated: 2018-3-28T00:00:00.000Z
 tags: [ Featured, Programming ]
 category: About

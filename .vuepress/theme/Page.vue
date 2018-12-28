@@ -118,7 +118,7 @@ function find(page, items, offset) {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import './styles/config.styl'
 @require './styles/wrapper.styl'
 

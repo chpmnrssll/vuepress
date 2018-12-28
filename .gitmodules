@@ -1,0 +1,3 @@
+[submodule ".vuepress/public/assets"]
+	path = .vuepress/public/assets
+	url = git@github.com:chpmnrssll/assets.git

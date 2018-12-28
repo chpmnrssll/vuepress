@@ -13,7 +13,7 @@ module.exports = {
       { text: 'Exterminate', link: '/exterminate/' }
     ],
     serviceWorker: {
-      updatPopup: true
+      updatePopup: true
     },
     sidebar: [
       '/',

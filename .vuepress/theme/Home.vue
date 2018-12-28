@@ -47,6 +47,12 @@
             ></video>
             <img
               class="lazyLoad"
+              v-if="page.frontmatter.poster"
+              :data-src="$withBase(page.frontmatter.poster)"
+              :alt="page.frontmatter.altText"
+            />
+            <img
+              class="lazyLoad"
               v-else-if="page.frontmatter.image"
               :data-src="$withBase(page.frontmatter.image)"
               :alt="page.frontmatter.altText"
@@ -120,8 +126,6 @@ overflow-x hidden
 
     .background
       height 100%
-      img
-        filter: blur(2px)
 
     .foreground
       .title
