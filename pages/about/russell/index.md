@@ -12,17 +12,10 @@ category: About
 ### About
 
 Russell has been involved with the internet and programming since the mid 90's.
-When not writing code you'll often find Russell working on a truck, taking
-apart an engine, or playing guitar.
+When not writing code you'll often find him working on a truck, taking something apart, or playing guitar.
 
 ### Skills
-
--   Object-oriented programming
--   2D & 3D real-time rendering
--   Gameplay, physics, and simulation
--   Automotive Diagnosis and Repair
--   Music Theory & Composition
-
+<br/>
 <a href="http://getbem.com/">
   <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/bemCSS.svg')" alt="BEM"/>
 </a>
@@ -116,7 +109,6 @@ apart an engine, or playing guitar.
 <a href="https://www.archlinux.org/">
   <img class="lazyLoad tiny" :data-src="$withBase('/assets/software/linuxArch.png')" alt="Arch Linux"/>
 </a>
-<br/>
 <a href="https://www.upwork.com/">
   <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoUpWork.png')"/>
 </a>
@@ -126,6 +118,14 @@ apart an engine, or playing guitar.
 <a href="https://www.upwork.com/">
   <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoODesk.png')"/>
 </a>
+
+-   Object-oriented programming
+-   2D & 3D real-time rendering
+-   Gameplay, physics, and simulation
+-   VGA Mode 13h & ModeX (0xA0000)
+-   Music Theory & Composition
+-   3D software rendering
+-   x86 Assembly
 
 ### Education
 
@@ -180,20 +180,13 @@ apart an engine, or playing guitar.
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/logo/logoASE.svg')">
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/automotive/aseT6.jpg')"/>
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/automotive/aseT7.jpg')"/>
-<br/>
-<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/automotive/freightliner.gif')"/>
 
-### Other
-
--   VGA Mode 13h & ModeX (0xA0000)
--   3D software rendering
--   x86 Assembly
-
+<!--
 <a href="https://en.wikipedia.org/wiki/Cakewalk_(sequencer)">
-  <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/software/cakewalkSequencer.jpg')" alt="Cakewalk"/>
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/software/cakewalkSequencer.jpg')" alt="Cakewalk"/>
 </a>
 <a href="https://en.wikipedia.org/wiki/FastTracker_2">
-  <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/software/pcFastTracker2.jpg')" alt="FastTracker 2"/>
+<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/software/pcFastTracker2.jpg')" alt="FastTracker 2"/>
 </a>
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/software/pcVGAPalette.jpg')" alt="VGA Palette"/>
 <br/>
@@ -201,7 +194,6 @@ apart an engine, or playing guitar.
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/automotive/wrenches.jpg')"/>
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/backgrounds/technician.jpg')">
 
-<!--
 <p>Portfolio CMS Site My personal portfolio/website. Custom made CMS. Used php, css, html5 &amp; javascript. <a href="http://old-rssll.rhcloud.com/">http://old-rssll.rhcloud.com/</a></p>
 <p>(2006) Police State Project A multi-player RPG based on Mutli Theft Auto engine. Used LUA, XML, &amp; SQL for client/server, 3D, GUI, and game-play programming. <a href="http://www.multitheftauto.com/">http://www.multitheftauto.com/</a></p>
 

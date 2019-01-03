@@ -5,7 +5,7 @@ poster: /assets/professional/MCRA/PublicDirectoryProfileChangesPoster.jpg
 title: MCRA Membership Directory
 tagline: PHP Wordpress Plugin
 lastUpdated: 2018-1-28T00:00:00.000Z
-tags: [ Programming, Professional ]
+tags: [ Featured, Programming, Professional ]
 category: Portfolio
 ---
 

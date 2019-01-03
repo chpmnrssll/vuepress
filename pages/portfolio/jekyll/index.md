@@ -5,7 +5,7 @@ poster: /assets/professional/jekyllSite1Poster.jpg
 title: Jekyll Portfolio Site
 tagline: Static PWA
 lastUpdated: 2018-10-04T00:00:00.000Z
-tags: [ Jekyll, Static, PWA ]
+tags: [ Featured, Jekyll, Static, PWA ]
 category: Portfolio
 ---
 

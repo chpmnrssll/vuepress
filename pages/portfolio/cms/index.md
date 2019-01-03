@@ -5,7 +5,7 @@ poster: /assets/professional/CMSSitePoster.jpg
 title: Content Management System
 tagline: CMS with PHP and MySQL/Activerecord
 lastUpdated: 2018-1-20T00:00:00.000Z
-tags: [ Programming, Professional, Portfolio ]
+tags: [ Featured, Programming, Professional, Portfolio ]
 category: Portfolio
 ---
 
@@ -35,7 +35,6 @@ Custom content management system built with PHP using MySQL/Activerecord.
 
 ### Results
 
-<img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/CMSSite.png')"/>
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/CMSProjects.png')"/>
 <img class="lazyLoad thumbnail" :data-src="$withBase('/assets/professional/CMSCode.png')"/>
 

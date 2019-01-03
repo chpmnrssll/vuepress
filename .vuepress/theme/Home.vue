@@ -28,11 +28,11 @@
         <NavLink
           class="feature header"
           v-for="page in this.$site.pages
-            .filter(page => page.frontmatter.layout === 'page')"
+            .filter(page => page.frontmatter.layout === 'page')
+            .filter(page => page.frontmatter.tags.includes('Featured'))"
           :key="page.key"
           :url="page.path"
         >
-        <!-- .filter(page => page.frontmatter.tags.includes('Featured'))" -->
           <section class="background">
             <video
               class="lazyLoad"
@@ -147,7 +147,7 @@ overflow-x hidden
 @media (min-width: $MQLaptop) and (max-width: $MQDesktop - 1)
   .home
     .features
-      grid-template-columns repeat(4, 1fr)
+      grid-template-columns repeat(3, 1fr)
 
 // Laptops, Desktops
 @media (min-width: $MQTabletL) and (max-width: $MQLaptop - 1)
