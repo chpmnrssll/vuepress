@@ -21,7 +21,7 @@
         </div>
       </section>
     </header>
-    <Content :custom="false"/>
+    <Content class="content" :custom="false"/>
     <footer class="footer">
       <div class="meta">
         <span class="lastUpdated" v-if="this.$page.frontmatter.lastUpdated">
@@ -29,7 +29,7 @@
         </span>
         <span class="tags" v-if="this.$page.frontmatter.tags">
           <span>Tags: </span>
-          <span v-for="tag in this.$page.frontmatter.tags">{{ tag }}</span>
+          <span v-for="tag in this.$page.frontmatter.tags">{{ tag }} </span>
         </span>
       </div>
       <div class="text">{{ this.$site.themeConfig.footer }}</div>
@@ -121,6 +121,11 @@ function find(page, items, offset) {
 <style lang="stylus" scoped>
 @import './styles/config.styl'
 @require './styles/wrapper.styl'
+
+.content
+  margin-left auto
+  margin-right auto
+  max-width 960px
 
 .header
   .background

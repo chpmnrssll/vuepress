@@ -5,7 +5,7 @@ poster: /assets/backgrounds/serversPoster.jpg
 title: Multithreaded Downloader
 tagline: Using HTTP Range Requests
 lastUpdated: 2018-08-27T00:00:00.000Z
-tags: [ Javascript, Async, WhatWG Streams ]
+tags: [ Featured, Javascript, Async, WhatWG Streams ]
 category: Portfolio
 ---
 
