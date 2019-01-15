@@ -19,3 +19,5 @@ Sep, 2018
 <br/>
 <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoJekyll.png')" alt="Jekyll"/>
 <img class="lazyLoad tiny" :data-src="$withBase('/assets/logo/logoGithub.png')" alt="Github"/>
+
+<a href="https://chpmnrssll.github.io/jekyll/">Link</a>
