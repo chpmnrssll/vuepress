@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <!-- <header class="header">
+    <header class="header">
       <section class="background">
         <video
           class="hero lazyLoad"
@@ -22,7 +22,7 @@
           {{ this.$page.frontmatter.tagline }}
         </div>
       </section>
-    </header> -->
+    </header>
     <main>
       <div class="features">
         <NavLink
@@ -59,9 +59,9 @@
             />
           </section>
           <section class="foreground">
-            <h2 class="title">{{ page.title }}</h2>
+            <h2 class="title fluidtype">{{ page.title }}</h2>
             <div class="tagline">{{ page.frontmatter.tagline }}</div>
-            <div class="excerpt" v-html="page.excerpt" />
+            <!-- <div class="excerpt" v-html="page.excerpt" /> -->
           </section>
         </NavLink>
       </div>
@@ -78,7 +78,8 @@
 <script>
 import NavLink from "./NavLink.vue";
 import { LazyLoader } from "./LazyLoader";
-import { autoplay } from "./autoplay";
+// import { autoplay } from "./autoplay";
+// import { textFit } from "./textFit"
 
 export default {
   components: { NavLink },
@@ -94,6 +95,7 @@ export default {
     const loader = new LazyLoader();
     loader.watch();
     // autoplay('.lazyLoad');
+    // textFit(document.getElementsByClassName('foreground'));
   }
 };
 </script>

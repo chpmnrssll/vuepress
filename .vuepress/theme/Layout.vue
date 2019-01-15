@@ -17,7 +17,7 @@ import Vue from 'vue';
 import Home from './Home.vue';
 import Page from './Page.vue';
 import Demo from './Demo.vue';
-import nprogress from "nprogress";
+import nprogress from 'nprogress';
 
 export default {
   components: {

@@ -18,7 +18,7 @@ Oct, 2018
 
 <blockquote>
 "Russell is excellent to work with. He always had a positive attitude and was a great communicator. I would highly suggest working with him, he will certainly be one of my go-to people for development needs."
-<cite>&mdash; <a href="https://www.paulhershey.com/">Paul Hershey</a></cite>
+<cite>&mdash; Paul Hershey</cite>
 </blockquote>
 
 Improved page speed scores, implemented lazy loading, background videos, and CSS/Design updates on a Jekyll based site.
@@ -28,6 +28,8 @@ Improved page speed scores, implemented lazy loading, background videos, and CSS
 -   Bootstrap
 -   Cloudinary
 
+<cite><a href="https://www.paulhershey.com/">www.paulhershey.com</a></cite>
+
 ### WordPress to Jekyll Conversion
 
 Oct, 2018
@@ -36,7 +38,7 @@ Oct, 2018
 
 Converted an existing WordPress/PHP site to a Jekyll static site. Makes use of the Jekyll Archives plugin.
 
-<cite><a href="http://www.g-widgets.com/">G-Widgets</a></cite>
+<cite><a href="http://www.g-widgets.com/">http://www.g-widgets.com/</a></cite>
 
 ### Taboola/Outbrain Recommended Content Clone
 
@@ -55,7 +57,7 @@ typically positioned below a news or blog article.
 -   CSS Grid
 -   Ajax
 
-<cite><a href="https://fin.afterdawn.com/uutiset/artikkeli.cfm/2018/06/01/canon-lopetti-viimeisenkin-filmikameran-myymisen">Link</a></cite>
+<cite><a href="https://fin.afterdawn.com/uutiset/artikkeli.cfm/2018/06/01/canon-lopetti-viimeisenkin-filmikameran-myymisen">fin.afterdawn.com</a></cite>
 
 ### Multithreaded Downloader
 
@@ -90,6 +92,8 @@ media links.
 
 -   Jekyll
 -   Github
+
+<cite><a href="https://github.com/chpmnrssll/identity-jekyll-theme">GitHub</a></cite>
 
 ### Membership Directory Plugin
 

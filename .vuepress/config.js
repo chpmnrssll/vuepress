@@ -1,7 +1,7 @@
 module.exports = {
   base: '/vuepress/',
   title: 'VuePress Portfolio Site',
-  description: 'VuePress + Github Pages',
+  description: 'VuePress + GitHub Pages + Travis-CI',
   evergreen: true,
   // markdown: {},
   themeConfig: {

@@ -1,10 +1,10 @@
 ---
 layout: home
-hero: /assets/backgrounds/aluminiumSpider.mp4
-poster: /assets/backgrounds/aluminiumSpiderPoster.jpg
-title: Aluminium Spider
-altText: Aluminium Spider
-tagline: Vuepress + Github Pages
+hero: /assets/backgrounds/weatherSkyClouds.mp4
+poster: /assets/backgrounds/weatherSkyCloudsPoster.jpg
+title: Russell Chapman
+altText: Vuepress Portfolio Site
+tagline: Vuepress Portfolio Site
 ---
 <!-- - https://stevenloria.com/responsive-typography/ -->
 <!-- - https://daverupert.com/2018/02/cheapass-parallax/ -->
