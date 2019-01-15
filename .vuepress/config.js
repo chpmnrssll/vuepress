@@ -1,6 +1,6 @@
 module.exports = {
-  base: '/aluminium-spider/',
-  title: 'Aluminium Spider',
+  base: '/vuepress/',
+  title: 'VuePress Portfolio Site',
   description: 'VuePress + Github Pages',
   evergreen: true,
   // markdown: {},
@@ -10,7 +10,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About', link: '/about/' },
-      { text: 'Exterminate', link: '/exterminate/' }
+      { text: 'Portfolio', link: '/portfolio/' }
     ],
     serviceWorker: {
       updatePopup: true
